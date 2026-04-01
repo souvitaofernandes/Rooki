@@ -1,10 +1,11 @@
 import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Card } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
 import { homeContent } from "@/data/home";
-import { Link2, Camera, MessageSquare, FileText, UserCheck, Mail } from "lucide-react";
+import { Link2, MessageSquare, Mail, ShoppingBag } from "lucide-react";
 
-const icons = [Link2, Camera, MessageSquare, FileText, UserCheck, Mail];
+const icons = [Link2, MessageSquare, Mail, ShoppingBag];
 
 export function WhatWeAnalyze() {
   const { analisa } = homeContent;
@@ -17,9 +18,9 @@ export function WhatWeAnalyze() {
         subtitle={analisa.sectionSubtitle}
       />
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-2">
         {analisa.items.map((item, i) => {
-          const Icon = icons[i];
+          const Icon = icons[i] || Link2;
           return (
             <Card key={item.title} hover>
               <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-olive/5">
@@ -34,6 +35,13 @@ export function WhatWeAnalyze() {
             </Card>
           );
         })}
+      </div>
+
+      <div className="mt-8 rounded-xl border border-brand-linen bg-brand-linen/30 p-4 text-center">
+        <Badge variant="outline" className="mb-2">Em breve</Badge>
+        <p className="text-sm text-brand-grey">
+          Análise de imagens e prints está em desenvolvimento e será lançada em breve.
+        </p>
       </div>
     </Section>
   );

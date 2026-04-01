@@ -6,6 +6,7 @@ export interface HeroContent {
   ctaText: string;
   ctaHref: string;
   badge?: string;
+  proofLine?: string;
 }
 
 export interface Step {
@@ -48,8 +49,20 @@ export interface FAQItem {
   answer: string;
 }
 
+export interface SocialProofItem {
+  value: string;
+  label: string;
+}
+
+export interface RecognitionItem {
+  title: string;
+  description: string;
+}
+
 export interface HomeContent {
   hero: HeroContent;
+  socialProof: SocialProofItem[];
+  recognition: RecognitionItem[];
   comoFunciona: {
     sectionTitle: string;
     sectionSubtitle: string;
@@ -79,13 +92,32 @@ export interface HomeContent {
 
 export const homeContent: HomeContent = {
   hero: {
-    headline: "Recebeu algo suspeito? Manda pra Rooki.",
+    headline: "Antes de clicar, manda pra Rooki.",
     subtitle:
-      "A Rooki é uma inteligência artificial que analisa links, mensagens e prints pelo WhatsApp e te diz se é golpe — em segundos, sem complicação.",
-    ctaText: "Conversar no WhatsApp",
+      "A Rooki é uma IA que analisa links e mensagens suspeitas direto pelo WhatsApp. Em segundos, você sabe se é golpe — e o que fazer.",
+    ctaText: "Analisar no WhatsApp",
     ctaHref: "https://wa.me/5511999999999",
     badge: "Gratuito no WhatsApp",
+    proofLine: "Mais de 1.000 mensagens já analisadas por pessoas reais.",
   },
+
+  socialProof: [
+    { value: "1.000+", label: "mensagens analisadas" },
+    { value: "40+", label: "pessoas já usaram" },
+    { value: "<10s", label: "tempo médio de resposta" },
+    { value: "100%", label: "respondidas" },
+  ],
+
+  recognition: [
+    {
+      title: "TOP 10 — Startup One 2026",
+      description: "Indicada entre os melhores projetos do programa de empreendedorismo da FIAP.",
+    },
+    {
+      title: "Rock New Ventures — Batch 10",
+      description: "Aprovada para aceleração no programa de 2026 da Rock New Ventures.",
+    },
+  ],
 
   comoFunciona: {
     sectionTitle: "Como funciona",
@@ -96,13 +128,13 @@ export const homeContent: HomeContent = {
         number: 1,
         title: "Envie pelo WhatsApp",
         description:
-          "Mande o link suspeito, o print da conversa ou encaminhe a mensagem diretamente para a Rooki.",
+          "Mande o link suspeito ou encaminhe a mensagem diretamente para a Rooki.",
       },
       {
         number: 2,
         title: "A Rooki analisa",
         description:
-          "Nossa IA cruza padrões de golpes conhecidos, verifica domínios, avalia o contexto da mensagem e identifica sinais de fraude.",
+          "Nossa IA cruza padrões de golpes conhecidos, verifica domínios e avalia o contexto da mensagem.",
       },
       {
         number: 3,
@@ -124,29 +156,19 @@ export const homeContent: HomeContent = {
           "URLs recebidas por WhatsApp, SMS, e-mail ou redes sociais. A Rooki verifica o domínio, a reputação e os padrões técnicos do link.",
       },
       {
-        title: "Prints de conversas",
-        description:
-          "Capturas de tela de mensagens no WhatsApp, Instagram, Telegram ou qualquer outro app. A Rooki lê e interpreta o conteúdo.",
-      },
-      {
         title: "Mensagens encaminhadas",
         description:
           "Textos que você recebeu e quer verificar. Basta encaminhar direto para o número da Rooki.",
       },
       {
-        title: "Comprovantes e boletos",
+        title: "Textos de e-mails suspeitos",
         description:
-          "Imagens de boletos, faturas ou comprovantes de pagamento que parecem falsos ou adulterados.",
+          "Copie e cole o texto de e-mails que simulam bancos, lojas, governo ou serviços de entrega.",
       },
       {
-        title: "Perfis e anúncios",
+        title: "Propostas e ofertas",
         description:
-          "Prints de perfis suspeitos em redes sociais ou anúncios com ofertas que parecem boas demais para ser verdade.",
-      },
-      {
-        title: "E-mails e notificações",
-        description:
-          "Prints ou textos de e-mails que simulam bancos, lojas, governo ou serviços de entrega.",
+          "Mensagens com ofertas boas demais para ser verdade, propostas de investimento ou emprego suspeitas.",
       },
     ],
   },
@@ -192,7 +214,7 @@ export const homeContent: HomeContent = {
   leadCapture: {
     headline: "Fique por dentro das novas formas de golpe",
     subtitle:
-      "Receba alertas, análises e dicas de proteção digital direto no seu e-mail. Sem spam, sem enrolação — só conteúdo que te protege.",
+      "Receba alertas, análises e dicas de proteção digital direto no seu e-mail — conteúdo do Rooki Insights, sem spam.",
     ctaText: "Quero receber",
     placeholder: "Seu melhor e-mail",
     disclaimer:
@@ -203,7 +225,7 @@ export const homeContent: HomeContent = {
     label: "Rooki Insights",
     headline: "Golpes mudam rápido. A gente acompanha.",
     description:
-      "Análises, alertas e tendências sobre fraudes digitais no Brasil. Conteúdo direto, sem terrorismo, feito para te manter informado.",
+      "Análises, alertas e tendências sobre fraudes digitais no Brasil. Conteúdo publicado no Substack, direto e prático.",
     ctaText: "Ver Insights",
     ctaHref: "/insights",
   },
@@ -212,7 +234,7 @@ export const homeContent: HomeContent = {
     label: "Educação",
     headline: "Conhecimento é a melhor proteção",
     description:
-      "Palestras, workshops e materiais gratuitos sobre segurança digital para empresas, comunidades e eventos.",
+      "Palestras e workshops sobre segurança digital — já realizados em escolas de Mogi das Cruzes para professores e pais.",
     ctaText: "Conhecer programas",
     ctaHref: "/educacao",
   },
@@ -232,7 +254,7 @@ export const homeContent: HomeContent = {
       {
         question: "A Rooki é gratuita?",
         answer:
-          "Sim. A análise básica pelo WhatsApp é gratuita. Nosso objetivo é que qualquer pessoa consiga verificar uma mensagem suspeita sem custo.",
+          "Sim. A análise pelo WhatsApp é gratuita. Nosso objetivo é que qualquer pessoa consiga verificar uma mensagem suspeita sem custo.",
       },
       {
         question: "Preciso instalar algum aplicativo?",
@@ -245,9 +267,9 @@ export const homeContent: HomeContent = {
           "Não. A Rooki é uma ferramenta de apoio que usa inteligência artificial para identificar padrões de golpe. Ela ajuda muito, mas não substitui seu bom senso nem a consulta a órgãos oficiais quando necessário.",
       },
       {
-        question: "A Rooki armazena minhas mensagens?",
+        question: "A Rooki analisa imagens e prints?",
         answer:
-          "A Rooki processa o conteúdo enviado para gerar a análise e não armazena mensagens pessoais de forma permanente. Consulte nossa Política de Privacidade para todos os detalhes.",
+          "No momento, a Rooki analisa textos e links. A análise de imagens e prints está em desenvolvimento e será lançada em breve.",
       },
       {
         question: "Posso usar a Rooki para proteger minha família?",

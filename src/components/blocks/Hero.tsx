@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/Badge";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
 import { homeContent } from "@/data/home";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Shield } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
@@ -12,14 +12,15 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-brand-snow">
-      {/* Subtle accent gradient */}
-      <div className="pointer-events-none absolute -right-40 -top-40 h-80 w-80 rounded-full bg-brand-lime/10 blur-3xl" />
+      {/* Subtle accent gradients */}
+      <div className="pointer-events-none absolute -right-40 -top-40 h-96 w-96 rounded-full bg-brand-lime/8 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-20 -left-20 h-60 w-60 rounded-full bg-brand-lime/5 blur-3xl" />
 
-      <div className="container-wide relative px-5 pb-16 pt-20 md:px-8 md:pb-24 md:pt-32 lg:pb-32 lg:pt-40">
+      <div className="container-wide relative px-5 pb-12 pt-16 md:px-8 md:pb-20 md:pt-28 lg:pb-28 lg:pt-36">
         <div className="mx-auto max-w-3xl text-center">
           {hero.badge && (
             <Badge variant="lime" className="mb-6">
+              <Shield className="mr-1 h-3 w-3" />
               {hero.badge}
             </Badge>
           )}
@@ -41,6 +42,12 @@ export function Hero() {
               </Button>
             </Link>
           </div>
+
+          {hero.proofLine && (
+            <p className="mt-6 text-sm text-brand-grey/70">
+              {hero.proofLine}
+            </p>
+          )}
         </div>
       </div>
     </section>

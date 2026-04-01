@@ -1,6 +1,9 @@
 import { Hero } from "@/components/blocks/Hero";
+import { SocialProof } from "@/components/blocks/SocialProof";
 import { HowItWorks } from "@/components/blocks/HowItWorks";
+import { VideoDemo } from "@/components/blocks/VideoDemo";
 import { WhatWeAnalyze } from "@/components/blocks/WhatWeAnalyze";
+import { Recognition } from "@/components/blocks/Recognition";
 import { ForWhom } from "@/components/blocks/ForWhom";
 import { LeadCapture } from "@/components/blocks/LeadCapture";
 import { TeaserBlock } from "@/components/blocks/TeaserBlock";
@@ -11,9 +14,12 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <SocialProof />
       <HowItWorks />
+      <VideoDemo />
       <WhatWeAnalyze />
       <ForWhom />
+      <Recognition />
       <LeadCapture />
       <TeaserBlock content={homeContent.insightsTeaser} background="snow" />
       <TeaserBlock content={homeContent.educacaoTeaser} background="linen" />

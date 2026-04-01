@@ -9,7 +9,7 @@ import { Send, Brain, ShieldCheck, AlertTriangle, CheckCircle, Info } from "luci
 export const metadata: Metadata = {
   title: "Como funciona",
   description:
-    "Entenda como a Rooki analisa links, mensagens e prints pelo WhatsApp para identificar golpes em segundos.",
+    "Entenda como a Rooki analisa links e mensagens pelo WhatsApp para identificar golpes em segundos.",
 };
 
 const stepIcons = [Send, Brain, ShieldCheck];
@@ -64,8 +64,30 @@ export default function ComoFunciona() {
         </div>
       </Section>
 
-      {/* What you can send */}
+      {/* Product demo */}
       <Section>
+        <SectionHeading
+          badge="Veja em ação"
+          title="A Rooki na prática"
+          subtitle="Assista ao chatbot funcionando de verdade no WhatsApp."
+        />
+        <div className="mx-auto max-w-2xl">
+          <div className="overflow-hidden rounded-2xl border border-brand-linen bg-brand-olive shadow-xl">
+            <video
+              className="w-full"
+              controls
+              playsInline
+              preload="metadata"
+            >
+              <source src="/Demo1.mp4" type="video/mp4" />
+              Seu navegador não suporta a reprodução de vídeo.
+            </video>
+          </div>
+        </div>
+      </Section>
+
+      {/* What you can send */}
+      <Section background="linen">
         <SectionHeading
           title={oQueEnviar.sectionTitle}
           subtitle={oQueEnviar.sectionSubtitle}

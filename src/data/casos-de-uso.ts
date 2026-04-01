@@ -43,19 +43,19 @@ export const casosDeUsoContent: CasosDeUsoContent = {
       tags: ["phishing", "sms", "link"],
     },
     {
-      slug: "print-mensagem",
-      title: "Print de conversa suspeita",
+      slug: "mensagem-suspeita",
+      title: "Mensagem suspeita de emprego ou investimento",
       description:
-        "Alguém te mandou uma mensagem estranha no WhatsApp, Instagram ou Telegram. Pode ser uma proposta de investimento, uma oferta de emprego ou uma abordagem romântica que parece boa demais.",
+        "Alguém te mandou uma mensagem estranha no WhatsApp, Instagram ou Telegram. Pode ser uma proposta de investimento, uma oferta de emprego ou uma abordagem que parece boa demais.",
       scenario:
-        "Um perfil desconhecido te aborda no Instagram oferecendo um trabalho de meio período que paga R$ 500 por dia para \"avaliar produtos online\". Você tira um print da conversa e manda para a Rooki.",
+        "Um perfil desconhecido te aborda no Instagram oferecendo um trabalho de meio período que paga R$ 500 por dia para \"avaliar produtos online\". Você copia o texto da conversa e manda para a Rooki.",
       whatRookiDoes: [
-        "Lê o conteúdo do print e identifica padrões de golpe de tarefa/comissão",
+        "Identifica padrões de golpe de tarefa/comissão no texto",
         "Reconhece gatilhos clássicos: dinheiro fácil, pouco esforço, urgência",
         "Explica como esse tipo de golpe funciona (você paga uma \"taxa\" e nunca recebe)",
         "Classifica como alto risco e orienta a bloquear e denunciar o perfil",
       ],
-      tags: ["print", "instagram", "emprego falso"],
+      tags: ["mensagem", "instagram", "emprego falso"],
     },
     {
       slug: "numero-novo",
@@ -78,7 +78,7 @@ export const casosDeUsoContent: CasosDeUsoContent = {
       description:
         "Você recebe uma ligação ou mensagem dizendo ser do seu banco. Pedem para confirmar dados, instalar um app de segurança ou fazer uma transferência para \"proteger\" sua conta.",
       scenario:
-        "Você recebe uma mensagem no WhatsApp com logo do Banco do Brasil dizendo: \"Detectamos uma compra suspeita no seu cartão. Para cancelar, clique no link abaixo ou ligue para nossa central.\" Você tira um print e manda para a Rooki.",
+        "Você recebe uma mensagem no WhatsApp dizendo ser do Banco do Brasil: \"Detectamos uma compra suspeita no seu cartão. Para cancelar, clique no link abaixo ou ligue para nossa central.\" Você encaminha a mensagem para a Rooki.",
       whatRookiDoes: [
         "Identifica que bancos não entram em contato por WhatsApp pedindo dados ou cliques em links",
         "Analisa o número do remetente e confirma que não é o canal oficial do banco",
@@ -93,7 +93,7 @@ export const casosDeUsoContent: CasosDeUsoContent = {
       description:
         "Você recebe um boleto por e-mail ou WhatsApp que parece ser de uma conta real — operadora de celular, escola, condomínio — mas os dados do beneficiário não batem.",
       scenario:
-        "Você recebe por e-mail um boleto da sua operadora de internet com vencimento próximo. O layout parece real, mas o remetente do e-mail é \"fatura@operadoranet-cobranca.com\" e o beneficiário no boleto é um CNPJ que você não reconhece. Você manda o print para a Rooki.",
+        "Você recebe por e-mail um boleto da sua operadora de internet com vencimento próximo. O remetente do e-mail é \"fatura@operadoranet-cobranca.com\" e o beneficiário no boleto é um CNPJ que você não reconhece. Você copia os dados do e-mail e manda para a Rooki.",
       whatRookiDoes: [
         "Analisa o remetente do e-mail e identifica que o domínio não é da operadora oficial",
         "Destaca a divergência no CNPJ do beneficiário",
@@ -123,10 +123,10 @@ export const casosDeUsoContent: CasosDeUsoContent = {
       description:
         "Alguém com um perfil aparentemente normal te aborda para amizade, relacionamento ou negócio. O perfil tem poucas fotos, foi criado recentemente ou tem seguidores estranhos.",
       scenario:
-        "Uma pessoa com perfil no Instagram te manda mensagem elogiando suas fotos e começa a conversar. Depois de alguns dias, diz que trabalha com investimentos em criptomoedas e quer te ensinar a ganhar dinheiro. Você manda o print do perfil e da conversa para a Rooki.",
+        "Uma pessoa com perfil no Instagram te manda mensagem elogiando suas fotos e começa a conversar. Depois de alguns dias, diz que trabalha com investimentos em criptomoedas e quer te ensinar a ganhar dinheiro. Você copia a mensagem e manda para a Rooki.",
       whatRookiDoes: [
         "Identifica o padrão de golpe romântico combinado com pirâmide financeira",
-        "Destaca sinais do perfil: poucas publicações, fotos genéricas, seguidores sem interação real",
+        "Destaca sinais de golpe: abordagem não solicitada, promessa de dinheiro fácil, roteiro típico",
         "Explica que abordagens não solicitadas oferecendo dinheiro são quase sempre golpe",
         "Orienta a não compartilhar dados pessoais e a denunciar o perfil na plataforma",
       ],

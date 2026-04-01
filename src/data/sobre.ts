@@ -79,7 +79,7 @@ export const sobreContent: SobreContent = {
 
   solucao: {
     headline: "A nossa abordagem",
-    body: "A Rooki combina inteligência artificial com conhecimento profundo sobre os golpes que circulam no Brasil. Nossa tecnologia analisa links, mensagens, imagens e padrões de comportamento para identificar fraudes — tudo isso direto pelo WhatsApp, em segundos, sem complicação. Mas não paramos na tecnologia. Acreditamos que educação é tão importante quanto detecção. Por isso, investimos em conteúdo, palestras, programas para escolas e materiais gratuitos. Queremos que as pessoas não apenas se protejam hoje, mas entendam como se proteger sempre.",
+    body: "A Rooki combina inteligência artificial com conhecimento profundo sobre os golpes que circulam no Brasil. Nossa tecnologia analisa links, mensagens e padrões de comportamento para identificar fraudes — tudo isso direto pelo WhatsApp, em segundos, sem complicação. Mas não paramos na tecnologia. Acreditamos que educação é tão importante quanto detecção. Por isso, investimos em conteúdo, palestras e programas para escolas. Queremos que as pessoas não apenas se protejam hoje, mas entendam como se proteger sempre.",
   },
 
   valores: {
@@ -136,15 +136,15 @@ export const sobreContent: SobreContent = {
       },
       {
         period: "2025",
-        title: "Lançamento",
+        title: "Lançamento do MVP",
         description:
-          "Lançamento da versão inicial da Rooki no WhatsApp, com foco em links suspeitos e mensagens de golpe.",
+          "Lançamento da primeira versão da Rooki no WhatsApp, com foco em análise de links e mensagens suspeitas.",
       },
       {
-        period: "2025 em diante",
-        title: "Expansão",
+        period: "2026",
+        title: "Reconhecimento e aceleração",
         description:
-          "Ampliação das capacidades de análise, lançamento dos programas educacionais e início das parcerias com escolas.",
+          "Indicada ao TOP 10 do Startup One (FIAP). Aprovada no Batch 10 de 2026 da Rock New Ventures para aceleração. Primeiras palestras em escolas de Mogi das Cruzes.",
       },
     ],
   },

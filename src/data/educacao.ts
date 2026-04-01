@@ -27,12 +27,23 @@ export interface FutureProduct {
   status: string;
 }
 
+export interface EducationProof {
+  escola: string;
+  cidade: string;
+  publico: string;
+  tipo: string;
+}
+
 export interface EducacaoContent {
   pageTitle: string;
   pageSubtitle: string;
   intro: {
     headline: string;
     body: string;
+  };
+  prova: {
+    sectionTitle: string;
+    items: EducationProof[];
   };
   programs: EducationProgram[];
   materiais: {
@@ -61,6 +72,24 @@ export const educacaoContent: EducacaoContent = {
   intro: {
     headline: "Por que investir em educação digital",
     body: "No Brasil, uma tentativa de golpe acontece a cada 6 segundos. A maioria das vítimas não cai por falta de inteligência, mas por falta de informação. A Rooki acredita que segurança digital é uma habilidade essencial — tão importante quanto saber atravessar a rua. Por isso, criamos programas educacionais acessíveis, práticos e adaptados para diferentes públicos.",
+  },
+
+  prova: {
+    sectionTitle: "Onde já estivemos",
+    items: [
+      {
+        escola: "Colégio Gaspar Vaz",
+        cidade: "Mogi das Cruzes, SP",
+        publico: "Professores e pais",
+        tipo: "Palestra",
+      },
+      {
+        escola: "Colégio Alma Mater",
+        cidade: "Mogi das Cruzes, SP",
+        publico: "Professores e pais",
+        tipo: "Palestra",
+      },
+    ],
   },
 
   programs: [
