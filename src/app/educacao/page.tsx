@@ -5,17 +5,17 @@ import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { educacaoContent } from "@/data/educacao";
-import { ArrowRight, CheckCircle, Download, Rocket } from "lucide-react";
+import { ArrowRight, CheckCircle, Download, Rocket, MapPin, Users } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Educação",
   description:
-    "Palestras, workshops e materiais gratuitos sobre segurança digital. Leve a Rooki para sua empresa, comunidade ou evento.",
+    "Palestras e workshops sobre segurança digital. Já realizamos palestras em escolas de Mogi das Cruzes para professores e pais.",
 };
 
 export default function Educacao() {
-  const { pageTitle, pageSubtitle, intro, programs, materiais, futureProducts, ctaFinal } =
+  const { pageTitle, pageSubtitle, intro, prova, programs, materiais, futureProducts, ctaFinal } =
     educacaoContent;
 
   return (
@@ -31,8 +31,39 @@ export default function Educacao() {
         </div>
       </Section>
 
-      {/* Programs */}
+      {/* Real proof — talks delivered */}
       <Section background="linen">
+        <SectionHeading
+          title={prova.sectionTitle}
+          subtitle="Palestras realizadas sobre segurança digital e golpes no ambiente escolar."
+        />
+        <div className="mx-auto grid max-w-3xl gap-6 md:grid-cols-2">
+          {prova.items.map((item) => (
+            <div
+              key={item.escola}
+              className="flex gap-4 rounded-2xl border border-brand-lime/20 bg-brand-lime/5 p-6"
+            >
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-lime/20">
+                <MapPin className="h-5 w-5 text-brand-olive" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-brand-olive">{item.escola}</h3>
+                <p className="text-sm text-brand-grey">{item.cidade}</p>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  <Badge variant="lime">{item.tipo}</Badge>
+                  <Badge variant="outline">
+                    <Users className="mr-1 h-3 w-3" />
+                    {item.publico}
+                  </Badge>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Programs */}
+      <Section>
         <SectionHeading title="Nossos programas" />
         <div className="grid gap-8 md:grid-cols-2">
           {programs.map((prog) => (
@@ -64,7 +95,7 @@ export default function Educacao() {
       </Section>
 
       {/* Free materials */}
-      <Section>
+      <Section background="linen">
         <SectionHeading
           title={materiais.sectionTitle}
           subtitle={materiais.sectionSubtitle}
@@ -82,7 +113,7 @@ export default function Educacao() {
       </Section>
 
       {/* Future products */}
-      <Section background="linen">
+      <Section>
         <SectionHeading
           title={futureProducts.sectionTitle}
           subtitle={futureProducts.sectionSubtitle}

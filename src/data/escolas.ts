@@ -27,6 +27,13 @@ export interface Testimonial {
   school?: string;
 }
 
+export interface EscolaAtendida {
+  escola: string;
+  cidade: string;
+  publico: string;
+  formato: string;
+}
+
 export interface EscolasContent {
   pageTitle: string;
   pageSubtitle: string;
@@ -52,6 +59,10 @@ export interface EscolasContent {
   comoContratar: {
     sectionTitle: string;
     steps: { number: number; title: string; description: string }[];
+  };
+  escolasAtendidas: {
+    sectionTitle: string;
+    items: EscolaAtendida[];
   };
   depoimentos: {
     sectionTitle: string;
@@ -285,31 +296,27 @@ export const escolasContent: EscolasContent = {
     ],
   },
 
-  depoimentos: {
-    sectionTitle: "O que dizem sobre o programa",
+  escolasAtendidas: {
+    sectionTitle: "Escolas onde já atuamos",
     items: [
       {
-        quote:
-          "Os alunos saíram do workshop identificando golpes que os próprios pais não percebiam. O nível de engajamento foi impressionante.",
-        author: "Carla Mendes",
-        role: "Coordenadora pedagógica",
-        school: "Colégio Vila Nova, São Paulo",
+        escola: "Colégio Gaspar Vaz",
+        cidade: "Mogi das Cruzes, SP",
+        publico: "Professores e pais",
+        formato: "Palestra sobre segurança digital e golpes",
       },
       {
-        quote:
-          "Finalmente um material que fala a língua dos adolescentes. Os exemplos são reais, atuais e fazem sentido para eles.",
-        author: "Ricardo Alves",
-        role: "Professor de tecnologia",
-        school: "Escola Parque, Rio de Janeiro",
-      },
-      {
-        quote:
-          "O encontro com as famílias foi transformador. Muitos pais vieram me agradecer depois dizendo que não tinham ideia dos riscos.",
-        author: "Ana Beatriz Costa",
-        role: "Diretora",
-        school: "Instituto Educacional Horizontes, Belo Horizonte",
+        escola: "Colégio Alma Mater",
+        cidade: "Mogi das Cruzes, SP",
+        publico: "Professores e pais",
+        formato: "Palestra sobre segurança digital e golpes",
       },
     ],
+  },
+
+  depoimentos: {
+    sectionTitle: "O que dizem sobre o programa",
+    items: [],
   },
 
   ctaFinal: {

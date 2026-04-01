@@ -69,10 +69,10 @@ export const comoFuncionaContent: ComoFuncionaContent = {
       number: 1,
       title: "Você envia o conteúdo suspeito",
       description:
-        "Abra o WhatsApp e mande para o número da Rooki aquilo que te deixou com a pulga atrás da orelha. Pode ser um link, um print, uma mensagem encaminhada ou até uma imagem de boleto.",
+        "Abra o WhatsApp e mande para o número da Rooki aquilo que te deixou com a pulga atrás da orelha. Pode ser um link, uma mensagem encaminhada ou o texto de uma proposta estranha.",
       details: [
         "Não precisa explicar nada — basta enviar o conteúdo",
-        "Funciona com texto, imagem, link ou mensagem encaminhada",
+        "Funciona com texto, link ou mensagem encaminhada",
         "Você pode mandar mais de um item por vez",
       ],
     },
@@ -84,7 +84,6 @@ export const comoFuncionaContent: ComoFuncionaContent = {
       details: [
         "Análise de URLs: verifica domínio, certificado, reputação e redirecionamentos",
         "Análise de texto: identifica gatilhos emocionais, urgência forçada e linguagem típica de golpes",
-        "Análise de imagem: lê prints e identifica elementos visuais suspeitos",
         "Cruzamento com base de padrões de fraudes atualizados constantemente",
       ],
     },
@@ -128,23 +127,13 @@ export const comoFuncionaContent: ComoFuncionaContent = {
         ],
       },
       {
-        type: "Capturas de tela (prints)",
+        type: "Propostas e ofertas suspeitas",
         description:
-          "Fotos da tela do celular mostrando a conversa, o e-mail ou o anúncio suspeito.",
+          "Textos de ofertas de emprego, investimento ou promoções que parecem boas demais para ser verdade.",
         examples: [
-          "Print de conversa no WhatsApp com proposta de investimento",
-          "Captura de e-mail simulando ser de uma loja conhecida",
-          "Print de anúncio no Instagram com preço muito abaixo do normal",
-        ],
-      },
-      {
-        type: "Imagens de boletos e comprovantes",
-        description:
-          "Fotos de boletos, faturas ou comprovantes que parecem adulterados ou falsos.",
-        examples: [
-          "Boleto recebido por e-mail com dados que não batem",
-          "Fatura de operadora que você não reconhece",
-          "Comprovante de Pix enviado por um comprador",
+          "Mensagem com oferta de emprego que paga adiantado",
+          "Proposta de investimento com retorno garantido",
+          "Promoção de produto com preço muito abaixo do normal",
         ],
       },
     ],
@@ -220,9 +209,9 @@ export const comoFuncionaContent: ComoFuncionaContent = {
           "Se recebeu um link e ficou em dúvida, mande para a Rooki antes de abrir. Prevenir é sempre mais fácil do que remediar.",
       },
       {
-        title: "Use prints legíveis",
+        title: "Copie o texto completo",
         description:
-          "Se for mandar uma captura de tela, garanta que o texto está visível e não cortado. Imagens escuras ou embaçadas dificultam a análise.",
+          "Se a mensagem suspeita é longa, copie o texto completo ao invés de resumir. Quanto mais contexto, melhor a análise.",
       },
       {
         title: "Adicione a Rooki nos grupos da família",

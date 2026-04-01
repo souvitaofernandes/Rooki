@@ -73,7 +73,7 @@ export const termsOfUse: LegalPage = {
     {
       heading: "2. Descrição do serviço",
       content:
-        "A Rooki é uma ferramenta de inteligência artificial que analisa conteúdos digitais (links, mensagens, imagens) enviados pelo usuário via WhatsApp, com o objetivo de identificar padrões associados a golpes e fraudes digitais. O serviço é informativo e educativo.",
+        "A Rooki é uma ferramenta de inteligência artificial que analisa conteúdos digitais (links e mensagens de texto) enviados pelo usuário via WhatsApp, com o objetivo de identificar padrões associados a golpes e fraudes digitais. O serviço é informativo e educativo.",
     },
     {
       heading: "3. Limitações do serviço",

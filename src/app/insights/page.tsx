@@ -5,60 +5,64 @@ import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { insightsContent } from "@/data/insights";
-import { ArrowUpRight, BookOpen, Clock } from "lucide-react";
+import { ArrowUpRight, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Rooki Insights",
   description:
-    "Análises, alertas e tendências sobre golpes digitais no Brasil. Conteúdo direto para te manter protegido.",
+    "Análises, alertas e educação sobre golpes digitais no Brasil. Conteúdo publicado no Substack pela Rooki.",
 };
 
 export default function Insights() {
-  const { pageTitle, pageSubtitle, categories, featured, substackCta, newsletterCta } =
+  const { pageTitle, pageSubtitle, intro, articles, substackUrl, newsletterCta } =
     insightsContent;
 
   return (
     <>
+      {/* Hero */}
       <Section>
         <SectionHeading
           badge="Rooki Insights"
           title={pageTitle}
           subtitle={pageSubtitle}
         />
-
-        {/* Categories */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((cat) => (
-            <Badge key={cat.slug} variant="outline" className="px-4 py-2 text-sm">
-              {cat.label}
-            </Badge>
-          ))}
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-lg leading-relaxed text-brand-grey">{intro}</p>
         </div>
       </Section>
 
-      {/* Featured articles */}
+      {/* Articles */}
       <Section background="linen">
-        <SectionHeading title="Destaques" align="left" />
+        <SectionHeading
+          title="Publicações recentes"
+          subtitle="Conteúdo publicado no Substack da Rooki. Clique para ler na íntegra."
+          align="left"
+        />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {featured.map((article) => (
-            <Card key={article.slug} hover>
-              <Badge variant="lime" className="mb-3">
-                {article.category}
-              </Badge>
-              <h3 className="mb-2 text-lg font-semibold text-brand-olive">
-                {article.title}
-              </h3>
-              <p className="mb-4 text-sm leading-relaxed text-brand-grey">
-                {article.excerpt}
-              </p>
-              <div className="flex items-center gap-3 text-xs text-brand-grey">
-                <span className="flex items-center gap-1">
-                  <Clock className="h-3 w-3" />
-                  {article.readingTime}
+          {articles.map((article) => (
+            <a
+              key={article.url}
+              href={article.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+            >
+              <Card hover className="h-full transition-all group-hover:border-brand-lime/40">
+                <Badge variant="lime" className="mb-3">
+                  {article.category}
+                </Badge>
+                <h3 className="mb-2 text-lg font-semibold text-brand-olive group-hover:text-brand-olive/80 transition-colors">
+                  {article.title}
+                </h3>
+                <p className="mb-4 text-sm leading-relaxed text-brand-grey">
+                  {article.excerpt}
+                </p>
+                <span className="inline-flex items-center gap-1 text-sm font-medium text-brand-olive">
+                  Ler no Substack
+                  <ArrowUpRight className="h-3.5 w-3.5" />
                 </span>
-                {article.date && <span>{article.date}</span>}
-              </div>
-            </Card>
+              </Card>
+            </a>
           ))}
         </div>
       </Section>
@@ -68,17 +72,19 @@ export default function Insights() {
         <div className="mx-auto max-w-2xl text-center">
           <BookOpen className="mx-auto mb-4 h-10 w-10 text-brand-lime" />
           <h2 className="text-3xl font-bold text-brand-olive md:text-4xl">
-            {substackCta.headline}
+            Todos os conteúdos no Substack
           </h2>
-          <p className="mt-4 text-lg text-brand-grey">{substackCta.subtitle}</p>
+          <p className="mt-4 text-lg text-brand-grey">
+            Acesse o Substack da Rooki para ver todos os artigos, assinar a newsletter e receber conteúdo novo direto no e-mail.
+          </p>
           <div className="mt-8">
             <a
-              href={process.env.NEXT_PUBLIC_SUBSTACK_URL || "https://rooki.substack.com"}
+              href={substackUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
               <Button variant="primary" size="lg">
-                {substackCta.ctaText}
+                Acessar Substack da Rooki
                 <ArrowUpRight className="h-4 w-4" />
               </Button>
             </a>
@@ -95,7 +101,7 @@ export default function Insights() {
           <p className="mt-4 text-brand-snow/70">{newsletterCta.subtitle}</p>
           <div className="mt-8">
             <a
-              href={process.env.NEXT_PUBLIC_SUBSTACK_URL || "https://rooki.substack.com"}
+              href={substackUrl}
               target="_blank"
               rel="noopener noreferrer"
             >

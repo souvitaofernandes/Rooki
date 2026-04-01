@@ -26,13 +26,13 @@ export const faqContent: FAQContent = {
       category: "Produto",
       question: "A Rooki é gratuita?",
       answer:
-        "Sim. A análise básica de links, mensagens e prints pelo WhatsApp é gratuita. Nosso objetivo é democratizar o acesso à proteção contra golpes digitais.",
+        "Sim. A análise de links e mensagens pelo WhatsApp é gratuita. Nosso objetivo é democratizar o acesso à proteção contra golpes digitais.",
     },
     {
       category: "Produto",
       question: "O que eu posso enviar para a Rooki?",
       answer:
-        "Você pode enviar links suspeitos, prints de conversas, mensagens encaminhadas, imagens de boletos, capturas de perfis em redes sociais, e-mails suspeitos e qualquer outro conteúdo que te deixou desconfiado.",
+        "No momento, você pode enviar links suspeitos, mensagens encaminhadas e textos copiados de e-mails ou propostas suspeitas. A análise de imagens e prints está em desenvolvimento e será lançada em breve.",
     },
     {
       category: "Produto",

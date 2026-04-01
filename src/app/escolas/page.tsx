@@ -5,19 +5,19 @@ import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { escolasContent } from "@/data/escolas";
-import { ArrowRight, CheckCircle, Shield, BookOpen, Users, School, Quote } from "lucide-react";
+import { ArrowRight, CheckCircle, Shield, BookOpen, Users, School, MapPin } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Rooki para Escolas",
   description:
-    "Programa de segurança digital para escolas. Conteúdo adaptado para alunos, professores e famílias.",
+    "Programa de segurança digital para escolas. Já realizamos palestras no Colégio Gaspar Vaz e Colégio Alma Mater em Mogi das Cruzes.",
 };
 
 const benefitIcons = [Shield, BookOpen, Users, School, CheckCircle, CheckCircle];
 
 export default function Escolas() {
-  const { pageTitle, pageSubtitle, intro, porQue, modules, stakeholders, comoContratar, depoimentos, ctaFinal } =
+  const { pageTitle, pageSubtitle, intro, porQue, modules, stakeholders, comoContratar, escolasAtendidas, ctaFinal } =
     escolasContent;
 
   return (
@@ -42,8 +42,39 @@ export default function Escolas() {
         </div>
       </Section>
 
-      {/* Why */}
+      {/* Schools served — real proof */}
       <Section background="linen">
+        <SectionHeading
+          title={escolasAtendidas.sectionTitle}
+          subtitle="Palestras realizadas sobre segurança digital e golpes no ambiente escolar."
+        />
+        <div className="mx-auto grid max-w-3xl gap-6 md:grid-cols-2">
+          {escolasAtendidas.items.map((item) => (
+            <div
+              key={item.escola}
+              className="flex gap-4 rounded-2xl border border-brand-lime/20 bg-brand-lime/5 p-6"
+            >
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-lime/20">
+                <MapPin className="h-5 w-5 text-brand-olive" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-brand-olive">{item.escola}</h3>
+                <p className="text-sm text-brand-grey">{item.cidade}</p>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  <Badge variant="lime">{item.formato}</Badge>
+                  <Badge variant="outline">
+                    <Users className="mr-1 h-3 w-3" />
+                    {item.publico}
+                  </Badge>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Why */}
+      <Section>
         <SectionHeading title={porQue.sectionTitle} />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {porQue.benefits.map((benefit, i) => {
@@ -60,7 +91,7 @@ export default function Escolas() {
       </Section>
 
       {/* Modules */}
-      <Section>
+      <Section background="linen">
         <SectionHeading
           title={modules.sectionTitle}
           subtitle={modules.sectionSubtitle}
@@ -85,7 +116,7 @@ export default function Escolas() {
       </Section>
 
       {/* Stakeholders */}
-      <Section background="linen">
+      <Section>
         <SectionHeading
           title={stakeholders.sectionTitle}
           subtitle={stakeholders.sectionSubtitle}
@@ -110,7 +141,7 @@ export default function Escolas() {
       </Section>
 
       {/* How to hire */}
-      <Section>
+      <Section background="linen">
         <SectionHeading title={comoContratar.sectionTitle} />
         <div className="mx-auto max-w-2xl space-y-6">
           {comoContratar.steps.map((step) => (
@@ -123,25 +154,6 @@ export default function Escolas() {
                 <p className="text-sm text-brand-grey">{step.description}</p>
               </div>
             </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* Testimonials */}
-      <Section background="linen">
-        <SectionHeading title={depoimentos.sectionTitle} />
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {depoimentos.items.map((dep) => (
-            <Card key={dep.author}>
-              <Quote className="mb-3 h-6 w-6 text-brand-lime/40" />
-              <p className="mb-4 text-sm italic leading-relaxed text-brand-grey">
-                &ldquo;{dep.quote}&rdquo;
-              </p>
-              <div>
-                <p className="text-sm font-semibold text-brand-olive">{dep.author}</p>
-                <p className="text-xs text-brand-grey">{dep.role}{dep.school ? ` — ${dep.school}` : ""}</p>
-              </div>
-            </Card>
           ))}
         </div>
       </Section>
