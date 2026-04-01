@@ -17,7 +17,7 @@ export function Logo({
 }: LogoProps) {
   const img = (
     <Image
-      src="/Logo.png"
+      src="/LOGO.PNG"
       alt="Rooki — Você suspeita, a gente detecta"
       width={width}
       height={height}
