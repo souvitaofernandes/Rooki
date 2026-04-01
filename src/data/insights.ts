@@ -27,7 +27,7 @@ export const insightsContent: InsightsContent = {
     "Análises, alertas e educação sobre golpes digitais no Brasil. Conteúdo publicado no Substack e atualizado regularmente.",
 
   intro:
-    "O Rooki Insights é o braço editorial da Rooki. Aqui publicamos análises sobre golpes em circulação, alertas sobre novas ameaças e conteúdo educativo sobre segurança digital. Tudo escrito de forma clara, prática e acessível.",
+    "A gente publica aqui o que descobre: golpes que estão circulando, tendências de fraude, alertas sobre ameaças novas e conteúdo educativo sobre segurança digital. Tudo no Substack, de graça, escrito pra qualquer pessoa entender.",
 
   articles: [
     {
@@ -77,9 +77,9 @@ export const insightsContent: InsightsContent = {
   substackUrl: "https://rooki.substack.com",
 
   newsletterCta: {
-    headline: "Receba os Insights no seu e-mail",
+    headline: "Quer receber direto no e-mail?",
     subtitle:
-      "Alertas sobre novos golpes, análises de tendências e dicas de proteção. Assine gratuitamente no Substack.",
+      "Alertas de golpes novos, análises de tendências e dicas de proteção. É de graça no Substack.",
     ctaText: "Assinar no Substack",
   },
 };

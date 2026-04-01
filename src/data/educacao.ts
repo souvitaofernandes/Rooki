@@ -1,4 +1,4 @@
-// Educação page content — Rooki website
+// Educação page content — Rooki website (consolidado com Escolas)
 
 export interface EducationProgram {
   slug: string;
@@ -34,6 +34,18 @@ export interface EducationProof {
   tipo: string;
 }
 
+export interface SchoolModule {
+  title: string;
+  description: string;
+  audience: string;
+  topics: string[];
+}
+
+export interface SchoolBenefit {
+  title: string;
+  description: string;
+}
+
 export interface EducacaoContent {
   pageTitle: string;
   pageSubtitle: string;
@@ -46,6 +58,20 @@ export interface EducacaoContent {
     items: EducationProof[];
   };
   programs: EducationProgram[];
+  escolasSection: {
+    headline: string;
+    body: string;
+    benefits: SchoolBenefit[];
+    modules: {
+      sectionTitle: string;
+      sectionSubtitle: string;
+      items: SchoolModule[];
+    };
+    comoContratar: {
+      sectionTitle: string;
+      steps: { number: number; title: string; description: string }[];
+    };
+  };
   materiais: {
     sectionTitle: string;
     sectionSubtitle: string;
@@ -67,11 +93,11 @@ export interface EducacaoContent {
 export const educacaoContent: EducacaoContent = {
   pageTitle: "Educação",
   pageSubtitle:
-    "Conhecimento é a melhor defesa contra golpes digitais. A Rooki leva informação prática para quem precisa — de escolas a empresas, de eventos comunitários a conferências.",
+    "Golpe se combate com informação. A Rooki leva conteúdo prático sobre segurança digital pra escolas, empresas e comunidades.",
 
   intro: {
-    headline: "Por que investir em educação digital",
-    body: "No Brasil, uma tentativa de golpe acontece a cada 6 segundos. A maioria das vítimas não cai por falta de inteligência, mas por falta de informação. A Rooki acredita que segurança digital é uma habilidade essencial — tão importante quanto saber atravessar a rua. Por isso, criamos programas educacionais acessíveis, práticos e adaptados para diferentes públicos.",
+    headline: "Por que falar de segurança digital",
+    body: "No Brasil, tentativas de golpe acontecem o tempo todo — e a maioria das vítimas não cai por falta de inteligência, cai por falta de informação. A gente acredita que saber se proteger online deveria ser tão natural quanto olhar pros dois lados antes de atravessar a rua. Por isso criamos programas educativos que são práticos, acessíveis e pensados pra gente de verdade.",
   },
 
   prova: {
@@ -97,16 +123,16 @@ export const educacaoContent: EducacaoContent = {
       slug: "palestras",
       title: "Palestras",
       description:
-        "Apresentações dinâmicas sobre golpes digitais, segurança online e cidadania digital. Adaptamos o conteúdo para o perfil do público — de adolescentes a idosos, de colaboradores a lideranças.",
+        "Bate-papos sobre golpes digitais, segurança online e cidadania digital. A gente adapta a linguagem pro público — de adolescentes a idosos, de funcionários a gestores.",
       format: "Presencial ou online",
-      audience: "Empresas, escolas, eventos, associações, comunidades",
+      audience: "Empresas, escolas, eventos, comunidades",
       duration: "45 a 90 minutos",
       topics: [
-        "Panorama dos golpes digitais no Brasil: o que está acontecendo agora",
-        "Como golpistas exploram emoções: urgência, medo, ganância e curiosidade",
-        "Pix, WhatsApp e redes sociais: os novos campos de batalha",
-        "Proteção prática: o que fazer (e o que nunca fazer) ao receber algo suspeito",
-        "Ferramentas e hábitos para navegar com mais segurança no dia a dia",
+        "O cenário atual de golpes no Brasil: o que tá rolando agora",
+        "Como golpistas mexem com suas emoções: urgência, medo, ganância",
+        "Pix, WhatsApp e redes sociais: onde os golpes mais acontecem",
+        "O que fazer (e o que nunca fazer) quando receber algo suspeito",
+        "Hábitos simples pra navegar com mais segurança no dia a dia",
       ],
       cta: {
         text: "Solicitar palestra",
@@ -117,16 +143,16 @@ export const educacaoContent: EducacaoContent = {
       slug: "workshops",
       title: "Workshops",
       description:
-        "Sessões práticas e interativas onde os participantes aprendem a identificar golpes na prática. Com exercícios reais, simulações e dinâmicas em grupo.",
-      format: "Presencial (preferencialmente) ou online",
-      audience: "Equipes corporativas, professores, grupos de idosos, comunidades",
+        "Aqui a galera põe a mão na massa. Exercícios com mensagens reais, simulações de golpe e dinâmicas em grupo. O pessoal sai sabendo reconhecer golpe na prática.",
+      format: "Presencial (de preferência) ou online",
+      audience: "Equipes de trabalho, professores, grupos de idosos",
       duration: "2 a 4 horas",
       topics: [
-        "Exercício: analisando mensagens reais — é golpe ou não?",
-        "Como verificar links, perfis e sites antes de confiar",
-        "Simulação de golpes: entendendo a perspectiva do golpista",
-        "Criando uma cultura de verificação no ambiente de trabalho e em casa",
-        "Plano de ação individual: seus próximos passos para se proteger",
+        "Exercício prático: essa mensagem é golpe ou não?",
+        "Como checar links, perfis e sites antes de confiar",
+        "Entrando na cabeça do golpista: simulação real",
+        "Criando o hábito de verificar — no trabalho e em casa",
+        "Plano de ação: seus próximos passos pra se proteger",
       ],
       cta: {
         text: "Solicitar workshop",
@@ -137,58 +163,200 @@ export const educacaoContent: EducacaoContent = {
       slug: "programa-escolas",
       title: "Programa para Escolas",
       description:
-        "Um programa completo de segurança digital para instituições de ensino, com conteúdo adaptado para alunos de diferentes faixas etárias, capacitação de professores e materiais para famílias.",
+        "Um programa completo de segurança digital pra escolas. Conteúdo adaptado por faixa etária, capacitação de professores e material pros pais levarem pra casa.",
       format: "Presencial e/ou online",
-      audience: "Escolas de ensino fundamental e médio",
+      audience: "Ensino fundamental e médio",
       duration: "Programa contínuo ou módulos avulsos",
       topics: [
-        "Cidadania digital para crianças e adolescentes",
-        "Identificação de golpes e fraudes nas redes sociais",
+        "Cidadania digital pra crianças e adolescentes",
+        "Como reconhecer golpes e fraudes nas redes",
         "Privacidade e proteção de dados pessoais",
         "Cyberbullying, fake news e desinformação",
-        "Capacitação de educadores em segurança digital",
-        "Materiais e orientações para as famílias",
+        "Formação de educadores em segurança digital",
+        "Materiais e orientações pras famílias",
       ],
       cta: {
-        text: "Conhecer o programa",
-        href: "/escolas",
+        text: "Ver detalhes do programa",
+        href: "#programa-escolas",
       },
     },
   ],
 
+  escolasSection: {
+    headline: "Programa para Escolas — em detalhe",
+    body: "Crianças e adolescentes estão online mais cedo e por mais tempo do que qualquer geração anterior. Criam contas, recebem mensagens, clicam em links e compartilham informações todos os dias — muitas vezes sem noção do risco. Professores e famílias nem sempre sabem como orientar. O programa Rooki pra Escolas existe pra preencher essa lacuna.",
+
+    benefits: [
+      {
+        title: "Material atualizado com golpes reais",
+        description:
+          "Os golpes mudam toda semana. Nosso conteúdo acompanha o que tá acontecendo de verdade, não exemplos teóricos de dois anos atrás.",
+      },
+      {
+        title: "Linguagem certa pra cada idade",
+        description:
+          "O que funciona pra uma turma de 10 anos não funciona pra adolescentes de 16. A gente adapta exemplos, dinâmicas e linguagem.",
+      },
+      {
+        title: "Professores também aprendem",
+        description:
+          "Não adianta só falar com os alunos. Capacitamos os educadores pra que o tema continue presente no dia a dia da escola.",
+      },
+      {
+        title: "Envolve as famílias",
+        description:
+          "Segurança digital precisa chegar em casa. Por isso incluímos encontros e materiais pra pais e responsáveis.",
+      },
+      {
+        title: "Aprender fazendo",
+        description:
+          "Nada de aula teórica sobre internet. Os workshops usam exemplos reais, simulações e atividades onde os alunos praticam de verdade.",
+      },
+      {
+        title: "Conectado com a BNCC e LGPD",
+        description:
+          "O programa se alinha com competências da Base Nacional Comum Curricular e com os princípios da LGPD.",
+      },
+    ],
+
+    modules: {
+      sectionTitle: "Módulos disponíveis",
+      sectionSubtitle:
+        "Cada escola monta o programa do jeito que faz sentido. Os módulos funcionam sozinhos ou integrados.",
+      items: [
+        {
+          title: "Cidadania digital e identidade online",
+          description:
+            "O que significa existir na internet? Como cuidar da sua identidade, privacidade e reputação no mundo digital.",
+          audience: "Alunos de 10 a 18 anos",
+          topics: [
+            "O que são dados pessoais e por que protegê-los",
+            "Configurações de privacidade nas redes sociais",
+            "Pegada digital: o que você deixa pra trás na internet",
+            "Senhas seguras e autenticação em dois fatores",
+          ],
+        },
+        {
+          title: "Identificação de golpes e fraudes",
+          description:
+            "Como reconhecer tentativas de golpe em mensagens, links, anúncios e perfis falsos. Com exercícios usando exemplos reais.",
+          audience: "Alunos de 12 a 18 anos",
+          topics: [
+            "Phishing: golpes por link e e-mail",
+            "Engenharia social: quando o golpista manipula suas emoções",
+            "Golpes por WhatsApp: número novo, Pix urgente, promoções falsas",
+            "Como verificar se algo é verdadeiro antes de agir",
+          ],
+        },
+        {
+          title: "Fake news e desinformação",
+          description:
+            "Como identificar notícia falsa, entender por que ela se espalha e desenvolver pensamento crítico.",
+          audience: "Alunos de 12 a 18 anos",
+          topics: [
+            "O que são fake news e por que funcionam",
+            "Checagem de fatos: ferramentas e métodos simples",
+            "Imagens e vídeos manipulados: como perceber",
+            "Cada um tem um papel no combate à desinformação",
+          ],
+        },
+        {
+          title: "Convivência digital e cyberbullying",
+          description:
+            "Relações saudáveis no ambiente digital, como identificar cyberbullying e o que fazer.",
+          audience: "Alunos de 10 a 15 anos",
+          topics: [
+            "O que é cyberbullying e como ele acontece",
+            "Brincadeira vs. agressão online",
+            "O que fazer se você for vítima ou testemunha",
+            "Por trás de cada tela tem uma pessoa",
+          ],
+        },
+        {
+          title: "Capacitação de educadores",
+          description:
+            "Formação pra professores e coordenadores, com ferramentas pra trazer segurança digital pro dia a dia da escola.",
+          audience: "Professores e coordenadores",
+          topics: [
+            "O que os alunos estão enfrentando online hoje",
+            "Como encaixar segurança digital no currículo que já existe",
+            "Protocolos pra lidar com incidentes digitais na escola",
+            "Materiais de apoio pra uso contínuo",
+          ],
+        },
+        {
+          title: "Encontro com famílias",
+          description:
+            "Sessão dedicada a pais e responsáveis, com dicas práticas pra acompanhar a vida digital dos filhos sem invadir a privacidade deles.",
+          audience: "Pais e responsáveis",
+          topics: [
+            "O que seus filhos fazem online (e o que você precisa saber)",
+            "Como puxar o assunto sem gerar conflito",
+            "Controle parental: o que funciona de verdade",
+            "Quando se preocupar e onde buscar ajuda",
+          ],
+        },
+      ],
+    },
+
+    comoContratar: {
+      sectionTitle: "Como levar a Rooki pra sua escola",
+      steps: [
+        {
+          number: 1,
+          title: "Fala com a gente",
+          description:
+            "Preenche o formulário ou manda um e-mail contando sobre a escola e o que você busca. A gente responde em até 48 horas.",
+        },
+        {
+          number: 2,
+          title: "A gente planeja junto",
+          description:
+            "Marcamos uma conversa pra entender o perfil dos alunos, as necessidades da escola e montar a proposta certa.",
+        },
+        {
+          number: 3,
+          title: "Execução e acompanhamento",
+          description:
+            "Realizamos os módulos escolhidos, acompanhamos o processo e no final entregamos um relatório de impacto.",
+        },
+      ],
+    },
+  },
+
   materiais: {
     sectionTitle: "Materiais gratuitos",
     sectionSubtitle:
-      "Conteúdos que você pode baixar, compartilhar e usar livremente para se proteger e proteger quem está à sua volta.",
+      "Conteúdo pra baixar, compartilhar e usar livremente. Pra você e pra quem tá à sua volta.",
     items: [
       {
-        title: "Guia rápido: como identificar golpes no WhatsApp",
+        title: "Guia rápido: golpes no WhatsApp",
         description:
-          "Um PDF de duas páginas com os sinais mais comuns de golpes por mensagem e o que fazer em cada situação.",
+          "PDF de duas páginas com os sinais mais comuns de golpe por mensagem e o que fazer em cada caso.",
         format: "PDF",
       },
       {
-        title: "Checklist de segurança digital para famílias",
+        title: "Checklist de segurança digital pra famílias",
         description:
-          "Uma lista prática de verificações e hábitos que toda família pode adotar para navegar com mais segurança.",
+          "Lista prática de hábitos e verificações que qualquer família pode adotar pra navegar com mais segurança.",
         format: "PDF",
       },
       {
-        title: "Cartilha de segurança digital para idosos",
+        title: "Cartilha de segurança digital pra idosos",
         description:
-          "Material com linguagem acessível e exemplos visuais, pensado para quem tem menos familiaridade com tecnologia.",
+          "Material com linguagem acessível e exemplos visuais, feito pra quem tem menos familiaridade com tecnologia.",
         format: "PDF",
       },
       {
         title: "Infográfico: os 5 golpes mais comuns de 2025",
         description:
-          "Um resumo visual dos golpes que mais circulam no Brasil, com dicas rápidas de como evitar cada um.",
+          "Resumo visual dos golpes que mais circulam no Brasil, com dicas rápidas de como evitar cada um.",
         format: "Imagem / PDF",
       },
       {
-        title: "Kit para professores: segurança digital em sala de aula",
+        title: "Kit pra professores: segurança digital em aula",
         description:
-          "Planos de aula, atividades e dinâmicas para trabalhar segurança digital com alunos do ensino fundamental e médio.",
+          "Planos de aula, atividades e dinâmicas pra trabalhar segurança digital com alunos do fundamental e médio.",
         format: "PDF",
       },
     ],
@@ -197,34 +365,34 @@ export const educacaoContent: EducacaoContent = {
   futureProducts: {
     sectionTitle: "Em breve",
     sectionSubtitle:
-      "Estamos desenvolvendo novos formatos para levar educação digital para ainda mais pessoas.",
+      "Estamos preparando novos formatos pra alcançar mais gente.",
     items: [
       {
         title: "Curso online: Segurança Digital Essencial",
         description:
-          "Um curso autodirigido com vídeos curtos, exercícios práticos e certificado. Para quem quer se aprofundar no tema no próprio ritmo.",
+          "Curso no seu ritmo, com vídeos curtos e exercícios práticos. Pra quem quer se aprofundar sem depender de agenda.",
         status: "Em desenvolvimento",
       },
       {
-        title: "Série de vídeos curtos para redes sociais",
+        title: "Vídeos curtos pra redes sociais",
         description:
-          "Conteúdos de 60 segundos explicando golpes e dicas de proteção, pensados para compartilhar no Instagram, TikTok e WhatsApp.",
+          "Conteúdos de 60 segundos explicando golpes e dicas de proteção, feitos pra compartilhar no Instagram, TikTok e WhatsApp.",
         status: "Em planejamento",
       },
       {
-        title: "Programa de certificação para multiplicadores",
+        title: "Programa de multiplicadores",
         description:
-          "Formação para profissionais que querem se tornar referência em segurança digital nas suas comunidades e organizações.",
+          "Formação pra pessoas que querem se tornar referência em segurança digital nas suas comunidades e organizações.",
         status: "Em planejamento",
       },
     ],
   },
 
   ctaFinal: {
-    headline: "Quer levar a Rooki para o seu evento ou organização?",
+    headline: "Quer levar a Rooki pro seu evento ou escola?",
     subtitle:
-      "Entre em contato e vamos montar juntos o formato ideal para o seu público.",
-    ctaText: "Falar com a Rooki",
+      "Fala com a gente e montamos juntos o formato ideal pro seu público.",
+    ctaText: "Entrar em contato",
     ctaHref: "/contato?assunto=educacao",
   },
 };

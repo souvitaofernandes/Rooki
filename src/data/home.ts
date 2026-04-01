@@ -81,7 +81,6 @@ export interface HomeContent {
   leadCapture: LeadCaptureContent;
   insightsTeaser: TeaserSection;
   educacaoTeaser: TeaserSection;
-  escolasTeaser: TeaserSection;
   faq: {
     sectionTitle: string;
     items: FAQItem[];
@@ -122,25 +121,25 @@ export const homeContent: HomeContent = {
   comoFunciona: {
     sectionTitle: "Como funciona",
     sectionSubtitle:
-      "Três passos simples entre a dúvida e a resposta. Sem cadastro, sem app, sem enrolação.",
+      "Três passos entre a dúvida e a resposta. Sem cadastro, sem app, sem enrolação.",
     steps: [
       {
         number: 1,
-        title: "Envie pelo WhatsApp",
+        title: "Manda pelo WhatsApp",
         description:
-          "Mande o link suspeito ou encaminhe a mensagem diretamente para a Rooki.",
+          "Cola o link suspeito ou encaminha a mensagem direto pra Rooki.",
       },
       {
         number: 2,
-        title: "A Rooki analisa",
+        title: "A IA analisa",
         description:
-          "Nossa IA cruza padrões de golpes conhecidos, verifica domínios e avalia o contexto da mensagem.",
+          "A Rooki cruza com padrões de golpe, checa domínios e avalia o contexto.",
       },
       {
         number: 3,
-        title: "Receba o resultado",
+        title: "Recebe o resultado",
         description:
-          "Em segundos, você recebe uma análise clara com o nível de risco e orientações sobre o que fazer.",
+          "Em segundos vem a análise: nível de risco e o que fazer.",
       },
     ],
   },
@@ -212,40 +211,31 @@ export const homeContent: HomeContent = {
   },
 
   leadCapture: {
-    headline: "Fique por dentro das novas formas de golpe",
+    headline: "Quer ficar sabendo dos golpes novos?",
     subtitle:
-      "Receba alertas, análises e dicas de proteção digital direto no seu e-mail — conteúdo do Rooki Insights, sem spam.",
+      "Alertas, análises e dicas de proteção direto no seu e-mail — conteúdo do Rooki Insights, sem spam.",
     ctaText: "Quero receber",
     placeholder: "Seu melhor e-mail",
     disclaimer:
-      "Você pode cancelar a qualquer momento. Não compartilhamos seu e-mail com ninguém.",
+      "Cancela quando quiser. Não compartilhamos seu e-mail com ninguém.",
   },
 
   insightsTeaser: {
     label: "Rooki Insights",
-    headline: "Golpes mudam rápido. A gente acompanha.",
+    headline: "Golpe novo toda semana. A gente acompanha.",
     description:
-      "Análises, alertas e tendências sobre fraudes digitais no Brasil. Conteúdo publicado no Substack, direto e prático.",
+      "Análises, alertas e tendências sobre fraudes digitais no Brasil. Publicamos no Substack, de graça, pra quem quer ficar por dentro.",
     ctaText: "Ver Insights",
     ctaHref: "/insights",
   },
 
   educacaoTeaser: {
     label: "Educação",
-    headline: "Conhecimento é a melhor proteção",
+    headline: "A gente também vai até as escolas",
     description:
-      "Palestras e workshops sobre segurança digital — já realizados em escolas de Mogi das Cruzes para professores e pais.",
-    ctaText: "Conhecer programas",
+      "Palestras sobre golpes digitais pra professores, pais e alunos. Já passamos por escolas em Mogi das Cruzes e estamos expandindo. Além disso, temos workshops e materiais gratuitos pra quem quiser se proteger melhor.",
+    ctaText: "Ver programas",
     ctaHref: "/educacao",
-  },
-
-  escolasTeaser: {
-    label: "Rooki para Escolas",
-    headline: "Segurança digital começa na escola",
-    description:
-      "Um programa pensado para escolas que querem preparar alunos, professores e famílias para navegar com mais segurança.",
-    ctaText: "Saiba mais",
-    ctaHref: "/escolas",
   },
 
   faq: {
@@ -267,9 +257,9 @@ export const homeContent: HomeContent = {
           "Não. A Rooki é uma ferramenta de apoio que usa inteligência artificial para identificar padrões de golpe. Ela ajuda muito, mas não substitui seu bom senso nem a consulta a órgãos oficiais quando necessário.",
       },
       {
-        question: "A Rooki analisa imagens e prints?",
+        question: "A Rooki analisa imagens?",
         answer:
-          "No momento, a Rooki analisa textos e links. A análise de imagens e prints está em desenvolvimento e será lançada em breve.",
+          "Ainda não. Hoje a Rooki trabalha com textos e links. Estamos desenvolvendo a análise de imagens, mas por enquanto o foco é fazer muito bem o que já funciona.",
       },
       {
         question: "Posso usar a Rooki para proteger minha família?",

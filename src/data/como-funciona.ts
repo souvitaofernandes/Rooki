@@ -62,49 +62,49 @@ export interface ComoFuncionaContent {
 export const comoFuncionaContent: ComoFuncionaContent = {
   pageTitle: "Como a Rooki funciona",
   pageSubtitle:
-    "Tudo acontece pelo WhatsApp. Sem cadastro, sem download, sem complicação. Você manda a dúvida, a Rooki devolve a resposta.",
+    "Tudo pelo WhatsApp. Sem cadastro, sem app, sem enrolação. Mandou a dúvida, recebeu a resposta.",
 
   steps: [
     {
       number: 1,
-      title: "Você envia o conteúdo suspeito",
+      title: "Manda o que te deixou com a pulga atrás da orelha",
       description:
-        "Abra o WhatsApp e mande para o número da Rooki aquilo que te deixou com a pulga atrás da orelha. Pode ser um link, uma mensagem encaminhada ou o texto de uma proposta estranha.",
+        "Abre o WhatsApp e envia pro número da Rooki. Pode ser um link, uma mensagem encaminhada ou o texto de uma proposta estranha.",
       details: [
-        "Não precisa explicar nada — basta enviar o conteúdo",
-        "Funciona com texto, link ou mensagem encaminhada",
-        "Você pode mandar mais de um item por vez",
+        "Não precisa explicar nada — só manda o conteúdo",
+        "Aceita texto, link ou mensagem encaminhada",
+        "Pode mandar mais de um item de uma vez",
       ],
     },
     {
       number: 2,
-      title: "A Rooki analisa com inteligência artificial",
+      title: "A IA analisa em segundos",
       description:
-        "Em poucos segundos, a nossa IA avalia o conteúdo cruzando padrões de golpes conhecidos no Brasil, verificando domínios, analisando o tom da mensagem e identificando sinais de manipulação.",
+        "A Rooki cruza o conteúdo com padrões de golpes conhecidos no Brasil, checa domínios, analisa o tom da mensagem e procura sinais de manipulação.",
       details: [
-        "Análise de URLs: verifica domínio, certificado, reputação e redirecionamentos",
-        "Análise de texto: identifica gatilhos emocionais, urgência forçada e linguagem típica de golpes",
-        "Cruzamento com base de padrões de fraudes atualizados constantemente",
+        "URLs: domínio, certificado, reputação e redirecionamentos",
+        "Texto: gatilhos emocionais, urgência forçada, linguagem típica de golpe",
+        "Base de padrões de fraude atualizada constantemente",
       ],
     },
     {
       number: 3,
-      title: "Você recebe o resultado com orientações",
+      title: "Você recebe a resposta com o que fazer",
       description:
-        "A Rooki responde com uma análise clara: o nível de risco do conteúdo, os motivos da avaliação e o que você deve fazer. Tudo em linguagem simples, direto no WhatsApp.",
+        "A Rooki devolve uma análise clara: nível de risco, os motivos e o que você deveria fazer. Tudo em linguagem simples, ali mesmo no WhatsApp.",
       details: [
-        "Classificação de risco: baixo, moderado ou alto",
-        "Explicação dos motivos que levaram à classificação",
-        "Orientações práticas sobre o que fazer (ou não fazer)",
-        "Quando necessário, indicação de canais oficiais para denúncia",
+        "Risco classificado como baixo, moderado ou alto",
+        "Os motivos por trás da classificação",
+        "Orientações diretas: o que fazer e o que evitar",
+        "Se necessário, indica canais oficiais pra denúncia",
       ],
     },
   ],
 
   oQueEnviar: {
-    sectionTitle: "O que você pode enviar",
+    sectionTitle: "O que dá pra mandar",
     sectionSubtitle:
-      "A Rooki entende diferentes tipos de conteúdo. Você não precisa formatar nada — basta mandar.",
+      "Não precisa formatar nada. Só manda do jeito que recebeu.",
     items: [
       {
         type: "Links e URLs",
@@ -196,32 +196,32 @@ export const comoFuncionaContent: ComoFuncionaContent = {
   },
 
   boasPraticas: {
-    sectionTitle: "Dicas para aproveitar melhor a Rooki",
+    sectionTitle: "Pra tirar mais proveito da Rooki",
     items: [
       {
-        title: "Envie o conteúdo original",
+        title: "Manda o conteúdo original",
         description:
-          "Sempre que possível, encaminhe a mensagem original ou envie o link completo. Quanto mais contexto, melhor a análise.",
+          "Encaminha a mensagem como veio ou cola o link inteiro. Quanto mais contexto, melhor a análise.",
       },
       {
-        title: "Mande antes de clicar",
+        title: "Primeiro manda, depois clica",
         description:
-          "Se recebeu um link e ficou em dúvida, mande para a Rooki antes de abrir. Prevenir é sempre mais fácil do que remediar.",
+          "Ficou na dúvida com um link? Manda pra Rooki antes de abrir. Prevenir é sempre mais fácil.",
       },
       {
-        title: "Copie o texto completo",
+        title: "Texto longo? Cola tudo",
         description:
-          "Se a mensagem suspeita é longa, copie o texto completo ao invés de resumir. Quanto mais contexto, melhor a análise.",
+          "Não precisa resumir a mensagem. Quanto mais completo o texto, mais precisa a análise.",
       },
       {
-        title: "Adicione a Rooki nos grupos da família",
+        title: "Bota a Rooki no grupo da família",
         description:
-          "Você pode convidar a Rooki para grupos de WhatsApp. Assim, qualquer pessoa do grupo pode usar quando precisar.",
+          "Dá pra adicionar a Rooki em grupos de WhatsApp. Qualquer pessoa do grupo pode usar quando quiser.",
       },
       {
         title: "Na dúvida, manda",
         description:
-          "Não existe pergunta boba. Se algo pareceu estranho, vale verificar. A Rooki está ali pra isso.",
+          "Não tem pergunta boba. Se pareceu estranho, vale checar. A Rooki tá ali pra isso.",
       },
     ],
   },

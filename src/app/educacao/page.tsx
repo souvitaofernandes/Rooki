@@ -5,17 +5,19 @@ import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { educacaoContent } from "@/data/educacao";
-import { ArrowRight, CheckCircle, Download, Rocket, MapPin, Users } from "lucide-react";
+import { ArrowRight, CheckCircle, Download, Rocket, MapPin, Users, Shield, BookOpen, School } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Educação",
   description:
-    "Palestras e workshops sobre segurança digital. Já realizamos palestras em escolas de Mogi das Cruzes para professores e pais.",
+    "Palestras, workshops e programa escolar sobre segurança digital. Já realizamos palestras em escolas de Mogi das Cruzes.",
 };
 
+const benefitIcons = [Shield, BookOpen, Users, School, CheckCircle, CheckCircle];
+
 export default function Educacao() {
-  const { pageTitle, pageSubtitle, intro, prova, programs, materiais, futureProducts, ctaFinal } =
+  const { pageTitle, pageSubtitle, intro, prova, programs, escolasSection, materiais, futureProducts, ctaFinal } =
     educacaoContent;
 
   return (
@@ -35,7 +37,7 @@ export default function Educacao() {
       <Section background="linen">
         <SectionHeading
           title={prova.sectionTitle}
-          subtitle="Palestras realizadas sobre segurança digital e golpes no ambiente escolar."
+          subtitle="Palestras sobre segurança digital e golpes no ambiente escolar."
         />
         <div className="mx-auto grid max-w-3xl gap-6 md:grid-cols-2">
           {prova.items.map((item) => (
@@ -67,7 +69,7 @@ export default function Educacao() {
         <SectionHeading title="Nossos programas" />
         <div className="grid gap-8 md:grid-cols-2">
           {programs.map((prog) => (
-            <Card key={prog.slug} hover>
+            <Card key={prog.slug} hover className={prog.slug === "programa-escolas" ? "md:col-span-2" : ""}>
               <div className="flex flex-wrap gap-2 mb-3">
                 <Badge variant="lime">{prog.format}</Badge>
                 <Badge variant="outline">{prog.audience}</Badge>
@@ -83,13 +85,88 @@ export default function Educacao() {
                   </div>
                 ))}
               </div>
-              <Link href={prog.cta.href}>
-                <Button variant="outline" size="sm">
-                  {prog.cta.text}
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </Link>
+              {prog.cta.href.startsWith("#") ? (
+                <a href={prog.cta.href}>
+                  <Button variant="outline" size="sm">
+                    {prog.cta.text}
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </a>
+              ) : (
+                <Link href={prog.cta.href}>
+                  <Button variant="outline" size="sm">
+                    {prog.cta.text}
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </Link>
+              )}
             </Card>
+          ))}
+        </div>
+      </Section>
+
+      {/* Schools program detail */}
+      <Section background="linen" id="programa-escolas">
+        <SectionHeading
+          badge="Escolas"
+          title={escolasSection.headline}
+        />
+        <div className="mx-auto max-w-2xl text-center mb-12">
+          <p className="text-lg text-brand-grey leading-relaxed">{escolasSection.body}</p>
+        </div>
+
+        {/* Benefits */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-16">
+          {escolasSection.benefits.map((benefit, i) => {
+            const Icon = benefitIcons[i] || Shield;
+            return (
+              <Card key={benefit.title} hover>
+                <Icon className="mb-3 h-6 w-6 text-brand-lime" />
+                <h3 className="mb-2 font-semibold text-brand-olive">{benefit.title}</h3>
+                <p className="text-sm text-brand-grey">{benefit.description}</p>
+              </Card>
+            );
+          })}
+        </div>
+
+        {/* Modules */}
+        <SectionHeading
+          title={escolasSection.modules.sectionTitle}
+          subtitle={escolasSection.modules.sectionSubtitle}
+        />
+        <div className="grid gap-8 md:grid-cols-2">
+          {escolasSection.modules.items.map((mod) => (
+            <Card key={mod.title} hover>
+              <Badge variant="lime" className="mb-3">{mod.audience}</Badge>
+              <h3 className="text-lg font-bold text-brand-olive mb-2">{mod.title}</h3>
+              <p className="text-sm text-brand-grey mb-4">{mod.description}</p>
+              <div className="space-y-2">
+                {mod.topics.map((topic) => (
+                  <div key={topic} className="flex items-start gap-2 text-sm text-brand-grey">
+                    <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-brand-lime" />
+                    {topic}
+                  </div>
+                ))}
+              </div>
+            </Card>
+          ))}
+        </div>
+      </Section>
+
+      {/* How to hire */}
+      <Section>
+        <SectionHeading title={escolasSection.comoContratar.sectionTitle} />
+        <div className="mx-auto max-w-2xl space-y-6">
+          {escolasSection.comoContratar.steps.map((step) => (
+            <div key={step.number} className="flex gap-4">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-lime text-sm font-bold text-brand-olive">
+                {step.number}
+              </div>
+              <div>
+                <h3 className="font-semibold text-brand-olive">{step.title}</h3>
+                <p className="text-sm text-brand-grey">{step.description}</p>
+              </div>
+            </div>
           ))}
         </div>
       </Section>

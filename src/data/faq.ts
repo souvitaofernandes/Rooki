@@ -32,7 +32,7 @@ export const faqContent: FAQContent = {
       category: "Produto",
       question: "O que eu posso enviar para a Rooki?",
       answer:
-        "No momento, você pode enviar links suspeitos, mensagens encaminhadas e textos copiados de e-mails ou propostas suspeitas. A análise de imagens e prints está em desenvolvimento e será lançada em breve.",
+        "Links suspeitos, mensagens encaminhadas e textos copiados de e-mails ou propostas estranhas. Hoje a Rooki trabalha com texto e links — a análise de imagens ainda está em desenvolvimento.",
     },
     {
       category: "Produto",
