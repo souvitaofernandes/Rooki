@@ -71,17 +71,19 @@ export default function ComoFunciona() {
           title="A Rooki na prática"
           subtitle="Assista ao chatbot funcionando de verdade no WhatsApp."
         />
-        <div className="mx-auto max-w-2xl">
-          <div className="overflow-hidden rounded-2xl border border-brand-linen bg-brand-olive shadow-xl">
-            <video
-              className="w-full"
-              controls
-              playsInline
-              preload="metadata"
-            >
-              <source src="/Demo1.mp4" type="video/mp4" />
-              Seu navegador não suporta a reprodução de vídeo.
-            </video>
+        <div className="mx-auto flex justify-center">
+          <div className="w-[280px] sm:w-[320px]">
+            <div className="overflow-hidden rounded-[2rem] border-[6px] border-brand-olive bg-brand-olive shadow-2xl">
+              <video
+                className="w-full"
+                controls
+                playsInline
+                preload="metadata"
+              >
+                <source src="/Demo1.mp4" type="video/mp4" />
+                Seu navegador não suporta a reprodução de vídeo.
+              </video>
+            </div>
           </div>
         </div>
       </Section>

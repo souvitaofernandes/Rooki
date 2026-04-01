@@ -23,7 +23,6 @@ export default function Home() {
       <LeadCapture />
       <TeaserBlock content={homeContent.insightsTeaser} background="snow" />
       <TeaserBlock content={homeContent.educacaoTeaser} background="linen" />
-      <TeaserBlock content={homeContent.escolasTeaser} background="snow" />
       <FAQBlock
         title={homeContent.faq.sectionTitle}
         items={homeContent.faq.items}

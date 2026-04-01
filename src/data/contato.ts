@@ -10,13 +10,13 @@ export interface ContatoContent {
 }
 
 export const contatoContent: ContatoContent = {
-  pageTitle: "Fale com a Rooki",
+  pageTitle: "Fale com a gente",
   pageSubtitle:
-    "Quer levar a Rooki para sua empresa, escola ou evento? Tem uma proposta de parceria? Estamos abertos para conversar.",
+    "Quer levar a Rooki pra sua empresa, escola ou evento? Tem uma ideia de parceria? A gente tá aberto pra conversar.",
 
-  formTitle: "Envie sua mensagem",
+  formTitle: "Manda sua mensagem",
   formSubtitle:
-    "Preencha o formulário abaixo e nosso time entrará em contato em até 48h úteis.",
+    "Preenche o formulário e a gente responde em até 48h úteis.",
 
   channels: {
     title: "Outros canais",

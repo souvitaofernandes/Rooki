@@ -54,66 +54,66 @@ export const sobreContent: SobreContent = {
     "Uma startup brasileira que usa inteligência artificial para proteger pessoas contra golpes digitais.",
 
   missao: {
-    headline: "Nossa missão",
-    body: "Tornar a proteção contra golpes digitais acessível para qualquer pessoa — independente de idade, conhecimento técnico ou condição social. Acreditamos que ninguém deveria precisar de um diploma em segurança da informação para saber se uma mensagem é golpe.",
+    headline: "O que a gente faz",
+    body: "A Rooki existe pra que qualquer pessoa consiga verificar se algo é golpe — sem precisar entender de tecnologia, sem pagar nada, sem sair do WhatsApp. Não importa se você tem 15 ou 75 anos. Se a mensagem te deixou com a pulga atrás da orelha, manda pra Rooki.",
   },
 
   problema: {
     headline: "O problema que a gente resolve",
-    body: "O Brasil é um dos países com mais golpes digitais no mundo. Milhões de brasileiros são alvos todos os dias — pelo WhatsApp, por SMS, por e-mail, pelas redes sociais. Os golpistas são rápidos, criativos e exploram a confiança das pessoas. Do outro lado, as vítimas muitas vezes não têm a quem recorrer no momento da dúvida. Entre receber a mensagem suspeita e cair no golpe, existem poucos segundos. A Rooki existe para ocupar esse espaço: ser a primeira consulta que você faz antes de clicar, responder ou transferir.",
+    body: "O Brasil é um dos países com mais golpes digitais no mundo. Pelo WhatsApp, SMS, e-mail, redes sociais — todo dia tem alguém tentando enganar alguém. Os golpistas são rápidos e criativos. As vítimas, na maioria das vezes, não têm a quem recorrer no momento da dúvida. Entre receber a mensagem e cair no golpe, são poucos segundos. A Rooki ocupa esse espaço: é a primeira consulta que você faz antes de clicar, responder ou transferir.",
     stats: [
       {
         value: "4.7 milhões",
-        label: "de brasileiros foram vítimas de golpes financeiros digitais em 2024",
+        label: "de vítimas de golpes digitais em 2024, segundo pesquisa DataSenado/Nexus",
       },
       {
-        value: "R$ 25 bilhões",
-        label: "em prejuízos estimados por fraudes digitais no Brasil em 2024",
+        value: "R$ 25 bi",
+        label: "em prejuízos estimados por fraudes digitais no Brasil (Fonte: Serasa Experian, 2024)",
       },
       {
         value: "1 a cada 6s",
-        label: "é a frequência de tentativas de golpe digital no país",
+        label: "uma tentativa de fraude digital acontece no Brasil (Serasa, 2024)",
       },
     ],
   },
 
   solucao: {
-    headline: "A nossa abordagem",
-    body: "A Rooki combina inteligência artificial com conhecimento profundo sobre os golpes que circulam no Brasil. Nossa tecnologia analisa links, mensagens e padrões de comportamento para identificar fraudes — tudo isso direto pelo WhatsApp, em segundos, sem complicação. Mas não paramos na tecnologia. Acreditamos que educação é tão importante quanto detecção. Por isso, investimos em conteúdo, palestras e programas para escolas. Queremos que as pessoas não apenas se protejam hoje, mas entendam como se proteger sempre.",
+    headline: "Como a Rooki ataca isso",
+    body: "A gente junta inteligência artificial com conhecimento real sobre os golpes que circulam no Brasil. A Rooki analisa links e mensagens, cruza com padrões de fraude e devolve uma resposta clara — tudo pelo WhatsApp, em segundos. Mas tecnologia sozinha não resolve. Por isso a gente também faz palestras em escolas e produz conteúdo educativo. A ideia é que as pessoas aprendam a se proteger, não que dependam da gente pra sempre.",
   },
 
   valores: {
-    sectionTitle: "Nossos valores",
+    sectionTitle: "No que a gente acredita",
     items: [
       {
         title: "Acessibilidade",
         description:
-          "Segurança digital não pode ser privilégio. Usamos o WhatsApp porque é onde as pessoas já estão. Falamos de um jeito que todo mundo entende.",
+          "Segurança digital não pode ser coisa de quem entende de tecnologia. A Rooki funciona no WhatsApp porque é onde todo mundo já está. E fala num jeito que qualquer pessoa entende.",
       },
       {
         title: "Transparência",
         description:
-          "Somos honestos sobre o que a Rooki faz e o que ela não faz. Não prometemos 100% de acerto. Não usamos medo para vender. Dizemos exatamente como funciona.",
+          "A Rooki não acerta sempre e a gente diz isso abertamente. Não usamos medo pra vender, não inflamos números e não prometemos o que não conseguimos entregar.",
       },
       {
         title: "Praticidade",
         description:
-          "Soluções complicadas não protegem ninguém. Cada decisão que tomamos passa por uma pergunta simples: isso facilita a vida de quem usa?",
+          "Se a solução é complicada, ela não protege ninguém. Tudo que a gente faz passa por uma pergunta: isso facilita a vida de quem usa?",
       },
       {
         title: "Responsabilidade",
         description:
-          "Lidamos com a confiança das pessoas em momentos de vulnerabilidade. Isso exige cuidado com dados, com linguagem e com o impacto das nossas respostas.",
+          "Quando alguém manda uma mensagem pra Rooki, geralmente está preocupado ou com medo. Isso exige cuidado — com os dados, com a linguagem, com o impacto da resposta.",
       },
       {
         title: "Educação",
         description:
-          "Detectar golpes é importante. Ensinar as pessoas a se proteger sozinhas é ainda mais. Queremos tornar o conhecimento acessível, não criar dependência.",
+          "Detectar golpe é bom. Ensinar a pessoa a se virar sozinha é melhor ainda. A gente quer espalhar conhecimento, não criar dependência.",
       },
       {
         title: "Empatia",
         description:
-          "Cair em golpe não é burrice. Todo mundo pode ser enganado. Tratamos cada pessoa com respeito e sem julgamento.",
+          "Cair em golpe não é burrice — todo mundo pode ser enganado. A gente trata cada pessoa com respeito, sem julgamento.",
       },
     ],
   },
@@ -150,14 +150,14 @@ export const sobreContent: SobreContent = {
   },
 
   comoConstruimos: {
-    headline: "Como a gente constrói",
-    body: "Somos uma startup enxuta, focada e com opinião. Construímos em público, ouvimos nossos usuários e iteramos rápido. Não temos medo de dizer \"isso a gente ainda não faz\" quando é verdade. Preferimos ser excelentes em poucas coisas do que medianos em muitas. Nossa stack é moderna, nosso time é pequeno e nosso compromisso é grande.",
+    headline: "Como a gente trabalha",
+    body: "Time pequeno. Foco total. A gente conversa com quem usa, lança rápido e melhora toda semana. Se algo ainda não funciona, a gente avisa — prefere ser honesto do que parecer maior do que é. Hoje a Rooki faz poucas coisas, mas faz bem feito.",
   },
 
   ctaFinal: {
-    headline: "Quer fazer parte dessa missão?",
+    headline: "Quer fazer parte disso?",
     subtitle:
-      "Seja como usuário, parceiro, educador ou apoiador — há muitas formas de contribuir para um Brasil mais seguro digitalmente.",
+      "Como usuário, parceiro, educador ou apoiador — tem várias formas de ajudar mais gente a não cair em golpe.",
     ctaText: "Fale com a gente",
     ctaHref: "/contato",
   },

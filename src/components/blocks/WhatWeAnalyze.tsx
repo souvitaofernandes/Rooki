@@ -40,7 +40,7 @@ export function WhatWeAnalyze() {
       <div className="mt-8 rounded-xl border border-brand-linen bg-brand-linen/30 p-4 text-center">
         <Badge variant="outline" className="mb-2">Em breve</Badge>
         <p className="text-sm text-brand-grey">
-          Análise de imagens e prints está em desenvolvimento e será lançada em breve.
+          Estamos trabalhando na análise de imagens. Por enquanto, a Rooki funciona com textos e links.
         </p>
       </div>
     </Section>

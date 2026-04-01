@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Rooki",
   tagline: "Você suspeita, a gente detecta",
   description:
-    "Rooki é a inteligência artificial que ajuda você a identificar golpes pelo WhatsApp. Envie um link, print ou mensagem suspeita e receba uma análise em segundos.",
+    "Rooki é a inteligência artificial que ajuda você a identificar golpes pelo WhatsApp. Envie um link ou mensagem suspeita e receba uma análise em segundos.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://rooki.com.br",
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5511999999999",
   substackUrl:
@@ -16,7 +16,6 @@ export const siteConfig = {
     { label: "Casos de uso", href: "/casos-de-uso" },
     { label: "Insights", href: "/insights" },
     { label: "Educação", href: "/educacao" },
-    { label: "Escolas", href: "/escolas" },
     { label: "Sobre", href: "/sobre" },
     { label: "FAQ", href: "/faq" },
     { label: "Contato", href: "/contato" },
@@ -30,7 +29,6 @@ export const siteConfig = {
     conteudo: [
       { label: "Rooki Insights", href: "/insights" },
       { label: "Educação", href: "/educacao" },
-      { label: "Escolas", href: "/escolas" },
     ],
     institucional: [
       { label: "Sobre", href: "/sobre" },

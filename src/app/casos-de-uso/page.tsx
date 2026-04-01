@@ -10,7 +10,7 @@ import { CheckCircle } from "lucide-react";
 export const metadata: Metadata = {
   title: "Casos de uso",
   description:
-    "Conheça situações reais onde a Rooki ajuda: links suspeitos, prints de golpe, falsas cobranças e mais.",
+    "Conheça situações reais onde a Rooki ajuda: links suspeitos, mensagens de golpe, falsas cobranças e mais.",
 };
 
 export default function CasosDeUso() {
