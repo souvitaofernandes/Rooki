@@ -15,7 +15,6 @@ export const siteConfig = {
     { label: "Como funciona", href: "/como-funciona" },
     { label: "Casos de uso", href: "/casos-de-uso" },
     { label: "Insights", href: "/insights" },
-    { label: "Educação", href: "/educacao" },
     { label: "Sobre", href: "/sobre" },
     { label: "FAQ", href: "/faq" },
     { label: "Contato", href: "/contato" },
@@ -28,7 +27,6 @@ export const siteConfig = {
     ],
     conteudo: [
       { label: "Rooki Insights", href: "/insights" },
-      { label: "Educação", href: "/educacao" },
     ],
     institucional: [
       { label: "Sobre", href: "/sobre" },

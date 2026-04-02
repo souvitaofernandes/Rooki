@@ -80,7 +80,6 @@ export interface HomeContent {
   };
   leadCapture: LeadCaptureContent;
   insightsTeaser: TeaserSection;
-  educacaoTeaser: TeaserSection;
   faq: {
     sectionTitle: string;
     items: FAQItem[];
@@ -198,11 +197,6 @@ export const homeContent: HomeContent = {
           "Quem recebe propostas, boletos e mensagens de fornecedores e clientes — e precisa saber se é legítimo antes de agir.",
       },
       {
-        title: "Educadores e escolas",
-        description:
-          "Profissionais que querem levar segurança digital para dentro da sala de aula e preparar alunos para o mundo conectado.",
-      },
-      {
         title: "Qualquer pessoa online",
         description:
           "Se você usa internet, você é alvo. A Rooki está a uma mensagem de distância para quem quer tirar a dúvida antes de clicar.",
@@ -227,15 +221,6 @@ export const homeContent: HomeContent = {
       "Análises, alertas e tendências sobre fraudes digitais no Brasil. Publicamos no Substack, de graça, pra quem quer ficar por dentro.",
     ctaText: "Ver Insights",
     ctaHref: "/insights",
-  },
-
-  educacaoTeaser: {
-    label: "Educação",
-    headline: "A gente também vai até as escolas",
-    description:
-      "Palestras sobre golpes digitais pra professores, pais e alunos. Já passamos por escolas em Mogi das Cruzes e estamos expandindo. Além disso, temos workshops e materiais gratuitos pra quem quiser se proteger melhor.",
-    ctaText: "Ver programas",
-    ctaHref: "/educacao",
   },
 
   faq: {

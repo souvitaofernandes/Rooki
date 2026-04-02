@@ -71,18 +71,6 @@ export const faqContent: FAQContent = {
         "Sim! É um dos usos mais comuns. Você pode salvar o número da Rooki no celular dos seus pais ou avós e orientá-los a encaminhar qualquer mensagem estranha. A Rooki responde de forma simples e direta.",
     },
     {
-      category: "Educação",
-      question: "Vocês fazem palestras sobre golpes digitais?",
-      answer:
-        "Sim. Oferecemos palestras e workshops sobre segurança digital para empresas, escolas, comunidades e eventos. Os temas vão desde reconhecimento de golpes até práticas de proteção no dia a dia. Entre em contato para saber mais.",
-    },
-    {
-      category: "Educação",
-      question: "Posso levar a Rooki para minha escola?",
-      answer:
-        "Sim! Temos um programa específico para escolas, com conteúdo adaptado para alunos, professores e famílias. O objetivo é levar educação em segurança digital de forma prática e acessível. Visite a página Escolas ou entre em contato.",
-    },
-    {
       category: "Contato",
       question: "Como entro em contato com a Rooki?",
       answer:
