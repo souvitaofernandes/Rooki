@@ -8,8 +8,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/como-funciona",
     "/casos-de-uso",
     "/insights",
-    "/educacao",
-    "/escolas",
     "/sobre",
     "/faq",
     "/contato",

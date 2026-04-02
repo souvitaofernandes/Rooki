@@ -79,7 +79,7 @@ export const sobreContent: SobreContent = {
 
   solucao: {
     headline: "Como a Rooki ataca isso",
-    body: "A gente junta inteligência artificial com conhecimento real sobre os golpes que circulam no Brasil. A Rooki analisa links e mensagens, cruza com padrões de fraude e devolve uma resposta clara — tudo pelo WhatsApp, em segundos. Mas tecnologia sozinha não resolve. Por isso a gente também faz palestras em escolas e produz conteúdo educativo. A ideia é que as pessoas aprendam a se proteger, não que dependam da gente pra sempre.",
+    body: "A gente junta inteligência artificial com conhecimento real sobre os golpes que circulam no Brasil. A Rooki analisa links e mensagens, cruza com padrões de fraude e devolve uma resposta clara — tudo pelo WhatsApp, em segundos. A ideia é que as pessoas aprendam a se proteger, não que dependam da gente pra sempre.",
   },
 
   valores: {
@@ -104,11 +104,6 @@ export const sobreContent: SobreContent = {
         title: "Responsabilidade",
         description:
           "Quando alguém manda uma mensagem pra Rooki, geralmente está preocupado ou com medo. Isso exige cuidado — com os dados, com a linguagem, com o impacto da resposta.",
-      },
-      {
-        title: "Educação",
-        description:
-          "Detectar golpe é bom. Ensinar a pessoa a se virar sozinha é melhor ainda. A gente quer espalhar conhecimento, não criar dependência.",
       },
       {
         title: "Empatia",
@@ -144,7 +139,7 @@ export const sobreContent: SobreContent = {
         period: "2026",
         title: "Reconhecimento e aceleração",
         description:
-          "Indicada ao TOP 10 do Startup One (FIAP). Aprovada no Batch 10 de 2026 da Rock New Ventures para aceleração. Primeiras palestras em escolas de Mogi das Cruzes.",
+          "Indicada ao TOP 10 do Startup One (FIAP). Aprovada no Batch 10 de 2026 da Rock New Ventures para aceleração.",
       },
     ],
   },
