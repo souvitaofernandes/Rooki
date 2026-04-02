@@ -25,7 +25,7 @@ export function Hero() {
             </Badge>
           )}
 
-          <h1 className="text-4xl font-bold leading-tight tracking-tight text-brand-olive md:text-5xl lg:text-6xl">
+          <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight text-brand-olive md:text-5xl lg:text-6xl">
             {hero.headline}
           </h1>
 

@@ -91,7 +91,7 @@ export interface HomeContent {
 
 export const homeContent: HomeContent = {
   hero: {
-    headline: "Antes de clicar, manda pra Rooki.",
+    headline: "Você suspeita, a gente detecta!",
     subtitle:
       "A Rooki é uma IA que analisa links e mensagens suspeitas direto pelo WhatsApp. Em segundos, você sabe se é golpe — e o que fazer.",
     ctaText: "Analisar no WhatsApp",

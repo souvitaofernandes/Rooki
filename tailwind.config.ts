@@ -11,14 +11,15 @@ const config: Config = {
       colors: {
         brand: {
           snow: "#FAFAF8",
-          linen: "#E3E1DA",
-          olive: "#363F06",
+          linen: "#DFDDD5",
+          olive: "#000000",
           grey: "#8A8B88",
-          lime: "#D2F61A",
+          lime: "#CDF43F",
         },
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+        sans: ['"Open Sans"', "system-ui", "-apple-system", "sans-serif"],
+        heading: ['"League Spartan"', "system-ui", "sans-serif"],
       },
       borderRadius: {
         xl: "1rem",
