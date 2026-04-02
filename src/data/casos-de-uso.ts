@@ -154,6 +154,6 @@ export const casosDeUsoContent: CasosDeUsoContent = {
     subtitle:
       "Manda para a Rooki pelo WhatsApp. É rápido, gratuito e pode evitar uma dor de cabeça enorme.",
     ctaText: "Conversar no WhatsApp",
-    ctaHref: "https://wa.me/5511999999999",
+    ctaHref: "https://wa.me/5511951999871",
   },
 };

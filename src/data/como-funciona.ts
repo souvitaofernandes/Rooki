@@ -231,6 +231,6 @@ export const comoFuncionaContent: ComoFuncionaContent = {
     subtitle:
       "Mande qualquer conteúdo suspeito pelo WhatsApp e veja a Rooki em ação. É rápido, gratuito e direto ao ponto.",
     ctaText: "Conversar no WhatsApp",
-    ctaHref: "https://wa.me/5511999999999",
+    ctaHref: "https://wa.me/5511951999871",
   },
 };
