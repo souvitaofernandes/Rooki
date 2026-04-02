@@ -95,7 +95,7 @@ export const homeContent: HomeContent = {
     subtitle:
       "A Rooki é uma IA que analisa links e mensagens suspeitas direto pelo WhatsApp. Em segundos, você sabe se é golpe — e o que fazer.",
     ctaText: "Analisar no WhatsApp",
-    ctaHref: "https://wa.me/5511951999871",
+    ctaHref: "https://wa.me/551151999871",
     badge: "Gratuito no WhatsApp",
     proofLine: "Mais de 1.000 mensagens já analisadas por pessoas reais.",
   },

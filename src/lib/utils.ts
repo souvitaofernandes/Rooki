@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function getWhatsAppUrl(message?: string): string {
-  const number = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5511951999871";
+  const number = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "551151999871";
   const defaultMessage =
     "Olá! Quero analisar uma mensagem ou link suspeito com a Rooki.";
   const text = encodeURIComponent(message || defaultMessage);
