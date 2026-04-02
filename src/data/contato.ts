@@ -24,7 +24,7 @@ export const contatoContent: ContatoContent = {
       {
         label: "WhatsApp (análise de golpes)",
         value: "Enviar mensagem",
-        href: "https://wa.me/5511999999999",
+        href: "https://wa.me/551151999871",
       },
       {
         label: "E-mail",
