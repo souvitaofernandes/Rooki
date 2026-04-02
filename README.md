@@ -76,7 +76,7 @@ NEXT_PUBLIC_SUPABASE_URL=https://seu-projeto.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=sua-chave-anon
 
 # WhatsApp (número para redirecionamento)
-NEXT_PUBLIC_WHATSAPP_NUMBER=5511999999999
+NEXT_PUBLIC_WHATSAPP_NUMBER=551151999871
 
 # Site URL (para SEO e Open Graph)
 NEXT_PUBLIC_SITE_URL=https://rooki.com.br
