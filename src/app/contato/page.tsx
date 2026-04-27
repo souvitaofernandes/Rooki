@@ -8,8 +8,7 @@ import { ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contato",
-  description:
-    "Entre em contato com a Rooki para palestras, workshops, parcerias ou dúvidas.",
+  description: "Entre em contato com a Rooki para parcerias, pilotos B2B ou dúvidas.",
 };
 
 export default function Contato() {
@@ -18,41 +17,35 @@ export default function Contato() {
   return (
     <>
       <Section>
-        <SectionHeading
-          badge="Contato"
-          title={pageTitle}
-          subtitle={pageSubtitle}
-        />
+        <SectionHeading badge="Contato" title={pageTitle} subtitle={pageSubtitle} />
       </Section>
 
-      <Section background="linen">
+      <Section background="surface">
         <div className="grid gap-10 lg:grid-cols-5">
-          {/* Form */}
           <div className="lg:col-span-3">
-            <h2 className="text-2xl font-bold text-brand-olive mb-2">{formTitle}</h2>
-            <p className="text-brand-grey mb-8">{formSubtitle}</p>
+            <h2 className="font-heading text-2xl font-bold text-white mb-2">{formTitle}</h2>
+            <p className="text-brand-muted mb-8">{formSubtitle}</p>
             <B2BForm />
           </div>
 
-          {/* Channels */}
           <div className="lg:col-span-2">
-            <h2 className="text-2xl font-bold text-brand-olive mb-6">{channels.title}</h2>
+            <h2 className="font-heading text-2xl font-bold text-white mb-6">{channels.title}</h2>
             <div className="space-y-4">
               {channels.items.map((ch) => (
                 <Card key={ch.label}>
-                  <p className="text-sm text-brand-grey mb-1">{ch.label}</p>
+                  <p className="text-sm text-brand-soft mb-1">{ch.label}</p>
                   {ch.href ? (
                     <a
                       href={ch.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-sm font-medium text-brand-olive hover:text-brand-lime transition-colors"
+                      className="inline-flex items-center gap-1 text-sm font-medium text-brand-accent hover:text-brand-aqua transition-colors"
                     >
                       {ch.value}
                       <ExternalLink className="h-3 w-3" />
                     </a>
                   ) : (
-                    <p className="text-sm font-medium text-brand-olive">{ch.value}</p>
+                    <p className="text-sm font-medium text-white">{ch.value}</p>
                   )}
                 </Card>
               ))}

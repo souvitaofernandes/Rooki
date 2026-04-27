@@ -9,7 +9,7 @@ export function Recognition() {
   const { recognition } = homeContent;
 
   return (
-    <Section background="snow">
+    <Section background="surface">
       <SectionHeading
         badge="Reconhecimento"
         title="Quem já aposta na Rooki"
@@ -22,14 +22,14 @@ export function Recognition() {
           return (
             <div
               key={item.title}
-              className="flex gap-4 rounded-2xl border border-brand-lime/20 bg-brand-lime/5 p-6"
+              className="flex gap-4 rounded-2xl border border-brand-accent/20 bg-brand-accent/5 p-6"
             >
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-lime/20">
-                <Icon className="h-5 w-5 text-brand-olive" />
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-gradient">
+                <Icon className="h-5 w-5 text-brand-bg" />
               </div>
               <div>
-                <h3 className="font-semibold text-brand-olive">{item.title}</h3>
-                <p className="mt-1 text-sm text-brand-grey">{item.description}</p>
+                <h3 className="font-semibold text-white">{item.title}</h3>
+                <p className="mt-1 text-sm text-brand-muted">{item.description}</p>
               </div>
             </div>
           );

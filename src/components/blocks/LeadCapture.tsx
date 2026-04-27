@@ -3,37 +3,29 @@
 import { Section } from "@/components/layout/Section";
 import { homeContent } from "@/data/home";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
-import { Mail } from "lucide-react";
 
 export function LeadCapture() {
   const { leadCapture } = homeContent;
 
   return (
-    <Section background="olive" id="lead-capture">
-      <div className="mx-auto max-w-2xl text-center">
-        <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-lime/20">
-          <Mail className="h-6 w-6 text-brand-lime" />
+    <Section background="surface2" id="lead-capture">
+      <div className="relative mx-auto max-w-2xl overflow-hidden rounded-3xl p-px">
+        {/* Gradient border */}
+        <div className="absolute inset-0 rounded-3xl bg-brand-gradient opacity-40" />
+        <div className="relative rounded-3xl bg-brand-surface2 p-8 text-center md:p-12">
+          <h2 className="font-heading text-3xl font-bold text-white md:text-4xl">
+            {leadCapture.headline}
+          </h2>
+          <p className="mx-auto mt-4 max-w-lg text-brand-muted">
+            {leadCapture.subtitle}
+          </p>
+          <div className="mt-8">
+            <WhatsAppButton label="Testar no WhatsApp" size="lg" />
+          </div>
+          <p className="mt-4 text-xs text-brand-soft">
+            {leadCapture.disclaimer}
+          </p>
         </div>
-
-        <h2 className="text-3xl font-bold text-brand-snow md:text-4xl">
-          {leadCapture.headline}
-        </h2>
-
-        <p className="mx-auto mt-4 max-w-lg text-brand-snow/70">
-          {leadCapture.subtitle}
-        </p>
-
-        <div className="mt-8">
-          <WhatsAppButton
-            label="Começar a usar a Rooki"
-            size="lg"
-            variant="primary"
-          />
-        </div>
-
-        <p className="mt-4 text-xs text-brand-snow/50">
-          {leadCapture.disclaimer}
-        </p>
       </div>
     </Section>
   );

@@ -1,40 +1,36 @@
 import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { Card } from "@/components/ui/Card";
 import { homeContent } from "@/data/home";
-import { Send, Brain, ShieldCheck } from "lucide-react";
-
-const icons = [Send, Brain, ShieldCheck];
 
 export function HowItWorks() {
   const { comoFunciona } = homeContent;
 
   return (
-    <Section background="linen" id="como-funciona">
+    <Section background="surface" id="como-funciona">
       <SectionHeading
-        badge="Simples assim"
         title={comoFunciona.sectionTitle}
         subtitle={comoFunciona.sectionSubtitle}
+        gradient
       />
 
-      <div className="grid gap-6 md:grid-cols-3 md:gap-8">
+      <div className="relative grid gap-8 md:grid-cols-3">
+        {/* Connecting line */}
+        <div className="absolute left-0 top-7 hidden h-px w-full bg-gradient-to-r from-brand-accent/40 via-brand-cyan/40 to-brand-purple/40 md:block" style={{ zIndex: 0 }} />
+
         {comoFunciona.steps.map((step, i) => {
-          const Icon = icons[i];
+          const gradientColors = [
+            "from-brand-accent to-brand-aqua",
+            "from-brand-aqua to-brand-cyan",
+            "from-brand-cyan to-brand-purple",
+          ];
           return (
-            <Card key={step.number} hover>
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-lime/20">
-                <Icon className="h-6 w-6 text-brand-olive" />
+            <div key={step.number} className="relative z-10 text-center">
+              <div className={`mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${gradientColors[i]} shadow-lg`}>
+                <span className="font-heading text-xl font-bold text-brand-bg">{step.number}</span>
               </div>
-              <div className="mb-2 text-xs font-bold uppercase tracking-wider text-brand-lime">
-                Passo {step.number}
-              </div>
-              <h3 className="mb-2 text-lg font-semibold text-brand-olive">
-                {step.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-brand-grey">
-                {step.description}
-              </p>
-            </Card>
+              <h3 className="font-heading mb-3 text-lg font-bold text-white">{step.title}</h3>
+              <p className="text-sm leading-relaxed text-brand-muted">{step.description}</p>
+            </div>
           );
         })}
       </div>

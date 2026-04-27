@@ -7,31 +7,27 @@ import type { TeaserSection } from "@/data/home";
 
 interface TeaserBlockProps {
   content: TeaserSection;
-  background?: "snow" | "linen";
+  background?: "default" | "surface" | "surface2" | "snow" | "linen";
   align?: "left" | "center";
 }
 
 export function TeaserBlock({
   content,
-  background = "snow",
+  background = "default",
   align = "center",
 }: TeaserBlockProps) {
   return (
     <Section background={background}>
-      <div
-        className={`mx-auto max-w-2xl ${
-          align === "center" ? "text-center" : ""
-        }`}
-      >
+      <div className={`mx-auto max-w-2xl ${align === "center" ? "text-center" : ""}`}>
         <Badge variant="lime" className="mb-4">
           {content.label}
         </Badge>
 
-        <h2 className="text-3xl font-bold text-brand-olive md:text-4xl">
+        <h2 className="font-heading text-3xl font-bold text-white md:text-4xl">
           {content.headline}
         </h2>
 
-        <p className="mt-4 text-lg text-brand-grey">{content.description}</p>
+        <p className="mt-4 text-lg text-brand-muted">{content.description}</p>
 
         <div className="mt-8">
           <Link href={content.ctaHref}>

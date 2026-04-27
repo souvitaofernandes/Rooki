@@ -37,10 +37,10 @@ export function B2BForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-brand-lime/30 bg-brand-lime/5 p-8 text-center">
-        <CheckCircle className="mx-auto mb-4 h-10 w-10 text-brand-lime" />
-        <h3 className="text-lg font-semibold text-brand-olive">Mensagem enviada!</h3>
-        <p className="mt-2 text-sm text-brand-grey">
+      <div className="rounded-2xl border border-brand-accent/30 bg-brand-accent/5 p-8 text-center">
+        <CheckCircle className="mx-auto mb-4 h-10 w-10 text-brand-accent" />
+        <h3 className="text-lg font-semibold text-white">Mensagem enviada!</h3>
+        <p className="mt-2 text-sm text-brand-muted">
           Nosso time entrará em contato em até 48h úteis.
         </p>
       </div>
@@ -104,7 +104,7 @@ export function B2BForm() {
         label={
           <span>
             Li e aceito a{" "}
-            <Link href="/politica-de-privacidade" className="underline hover:text-brand-olive">
+            <Link href="/politica-de-privacidade" className="underline hover:text-white">
               Política de Privacidade
             </Link>
           </span>

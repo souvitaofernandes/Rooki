@@ -11,7 +11,7 @@ export function WhatWeAnalyze() {
   const { analisa } = homeContent;
 
   return (
-    <Section id="analisa">
+    <Section id="analisa" background="surface">
       <SectionHeading
         badge="Análise inteligente"
         title={analisa.sectionTitle}
@@ -23,13 +23,13 @@ export function WhatWeAnalyze() {
           const Icon = icons[i] || Link2;
           return (
             <Card key={item.title} hover>
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-olive/5">
-                <Icon className="h-5 w-5 text-brand-olive" />
+              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-gradient">
+                <Icon className="h-5 w-5 text-brand-bg" />
               </div>
-              <h3 className="mb-2 text-base font-semibold text-brand-olive">
+              <h3 className="mb-2 text-base font-semibold text-white">
                 {item.title}
               </h3>
-              <p className="text-sm leading-relaxed text-brand-grey">
+              <p className="text-sm leading-relaxed text-brand-muted">
                 {item.description}
               </p>
             </Card>
@@ -37,9 +37,9 @@ export function WhatWeAnalyze() {
         })}
       </div>
 
-      <div className="mt-8 rounded-xl border border-brand-linen bg-brand-linen/30 p-4 text-center">
+      <div className="mt-8 rounded-2xl border border-white/8 bg-white/4 p-4 text-center">
         <Badge variant="outline" className="mb-2">Em breve</Badge>
-        <p className="text-sm text-brand-grey">
+        <p className="text-sm text-brand-soft">
           Estamos trabalhando na análise de imagens. Por enquanto, a Rooki funciona com textos e links.
         </p>
       </div>

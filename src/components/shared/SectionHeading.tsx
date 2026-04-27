@@ -8,6 +8,7 @@ interface SectionHeadingProps {
   align?: "left" | "center";
   className?: string;
   dark?: boolean;
+  gradient?: boolean;
 }
 
 export function SectionHeading({
@@ -17,6 +18,7 @@ export function SectionHeading({
   align = "center",
   className,
   dark = false,
+  gradient = false,
 }: SectionHeadingProps) {
   return (
     <div
@@ -34,7 +36,7 @@ export function SectionHeading({
       <h2
         className={cn(
           "font-heading text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl",
-          dark ? "text-brand-snow" : "text-brand-olive"
+          gradient ? "gradient-text" : "text-white"
         )}
       >
         {title}
@@ -42,9 +44,8 @@ export function SectionHeading({
       {subtitle && (
         <p
           className={cn(
-            "mt-4 max-w-2xl text-lg",
-            align === "center" && "mx-auto",
-            dark ? "text-brand-snow/70" : "text-brand-grey"
+            "mt-4 max-w-2xl text-lg text-brand-muted",
+            align === "center" && "mx-auto"
           )}
         >
           {subtitle}

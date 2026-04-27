@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-type BadgeVariant = "default" | "lime" | "outline";
+type BadgeVariant = "default" | "lime" | "outline" | "gradient";
 
 interface BadgeProps {
   children: React.ReactNode;
@@ -9,9 +9,10 @@ interface BadgeProps {
 }
 
 const variantStyles: Record<BadgeVariant, string> = {
-  default: "bg-brand-linen text-brand-olive",
-  lime: "bg-brand-lime/20 text-brand-olive",
-  outline: "border border-brand-grey/30 text-brand-grey",
+  default: "bg-white/10 text-brand-muted border border-white/10",
+  lime: "bg-brand-accent/15 text-brand-accent border border-brand-accent/30",
+  outline: "border border-white/20 text-brand-muted",
+  gradient: "bg-brand-gradient text-[#0D0F12] font-semibold",
 };
 
 export function Badge({ children, variant = "default", className }: BadgeProps) {

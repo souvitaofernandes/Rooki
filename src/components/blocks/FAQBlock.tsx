@@ -19,24 +19,24 @@ interface FAQBlockProps {
   items: FAQItem[];
   ctaText?: string;
   ctaHref?: string;
-  background?: "snow" | "linen";
+  background?: "default" | "surface" | "surface2" | "snow" | "linen";
 }
 
 function AccordionItem({ question, answer }: FAQItem) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="border-b border-brand-linen last:border-0">
+    <div className="border-b border-white/8 last:border-0">
       <button
         onClick={() => setOpen(!open)}
-        className="flex w-full items-center justify-between gap-4 py-5 text-left transition-colors hover:text-brand-olive"
+        className="flex w-full items-center justify-between gap-4 py-5 text-left transition-colors hover:text-white"
       >
-        <span className="text-base font-medium text-brand-olive">
+        <span className="text-base font-medium text-white">
           {question}
         </span>
         <ChevronDown
           className={cn(
-            "h-5 w-5 shrink-0 text-brand-grey transition-transform duration-200",
+            "h-5 w-5 shrink-0 text-brand-soft transition-transform duration-200",
             open && "rotate-180"
           )}
         />
@@ -47,7 +47,7 @@ function AccordionItem({ question, answer }: FAQItem) {
           open ? "max-h-96 pb-5" : "max-h-0"
         )}
       >
-        <p className="text-sm leading-relaxed text-brand-grey">{answer}</p>
+        <p className="text-sm leading-relaxed text-brand-muted">{answer}</p>
       </div>
     </div>
   );
@@ -58,13 +58,13 @@ export function FAQBlock({
   items,
   ctaText,
   ctaHref,
-  background = "snow",
+  background = "default",
 }: FAQBlockProps) {
   return (
     <Section background={background} id="faq">
       <SectionHeading title={title} />
 
-      <div className="mx-auto max-w-2xl rounded-2xl border border-brand-linen bg-white p-6 md:p-8">
+      <div className="mx-auto max-w-2xl glass-card p-6 md:p-8">
         {items.map((item) => (
           <AccordionItem key={item.question} {...item} />
         ))}
