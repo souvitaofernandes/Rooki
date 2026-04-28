@@ -1,0 +1,10 @@
+<!-- Substituir por logo SVG da Rooki — torre de xadrez integrada ao R -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" width="160" height="48" role="img" aria-label="Rooki">
+  <defs>
+    <linearGradient id="rk" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#443CFF"/>
+      <stop offset="100%" stop-color="#04C5FF"/>
+    </linearGradient>
+  </defs>
+  <text x="0" y="36" font-family="Inter, system-ui, sans-serif" font-size="30" font-weight="800" letter-spacing="-0.02em" fill="url(#rk)">Rooki</text>
+</svg>

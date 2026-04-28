@@ -1,26 +1,30 @@
 import type { Metadata } from "next";
-import "@/styles/globals.css";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { siteConfig } from "@/config/site";
+import { Inter } from "next/font/google";
+import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: {
-    default: `${siteConfig.name} — ${siteConfig.tagline}`,
-    template: `%s | ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  metadataBase: new URL(siteConfig.url),
+  title: "Rooki — Antes de cair em um golpe, pergunte à Rooki",
+  description:
+    "A Rooki é uma segunda opinião sobre mensagens suspeitas. Funciona no WhatsApp, em segundos, e fala português brasileiro porque os golpes daqui são daqui.",
   openGraph: {
-    type: "website",
+    title: "Rooki — Mostra pra Rooki antes de clicar",
+    description:
+      "A Rooki é uma segunda opinião sobre mensagens suspeitas. Funciona no WhatsApp, em segundos.",
+    url: "https://rooki.com.br",
+    siteName: "Rooki",
     locale: "pt_BR",
-    siteName: siteConfig.name,
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
-    description: siteConfig.description,
+    type: "website",
   },
-  robots: {
-    index: true,
-    follow: true,
+  twitter: {
+    card: "summary_large_image",
+    title: "Rooki",
+    description: "Mostra pra Rooki antes de clicar.",
   },
 };
 
@@ -30,19 +34,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="font-sans antialiased">
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+    <html lang="pt-BR" className={inter.variable}>
+      <body className="min-h-screen bg-bg font-sans text-text antialiased">
+        {children}
       </body>
     </html>
   );

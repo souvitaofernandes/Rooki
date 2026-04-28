@@ -1,17 +1,9 @@
 import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
-  return clsx(inputs);
+  return twMerge(clsx(inputs));
 }
 
-export function getWhatsAppUrl(message?: string): string {
-  const number = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "551151999871";
-  const defaultMessage =
-    "Olá! Quero analisar uma mensagem ou link suspeito com a Rooki.";
-  const text = encodeURIComponent(message || defaultMessage);
-  return `https://wa.me/${number}?text=${text}`;
-}
-
-export function getSubstackUrl(): string {
-  return process.env.NEXT_PUBLIC_SUBSTACK_URL || "https://rooki.substack.com";
-}
+export const WHATSAPP_URL = "https://wa.me/551151999871";
+export const CONTACT_EMAIL = "contato@rooki.com.br";
