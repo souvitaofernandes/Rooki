@@ -1,29 +1,27 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        brand: {
-          snow: "#FAFAF8",
-          linen: "#DFDDD5",
-          olive: "#000000",
-          grey: "#8A8B88",
-          lime: "#CDF43F",
-        },
+        bg: "#FFFFFF",
+        ink: "#0A0E27",
+        text: "#1A1D2E",
+        muted: "#5A6178",
+        primary: "#443CFF",
+        cyan: "#04C5FF",
+        success: "#00FC6E",
+        border: "#E5E7EB",
       },
       fontFamily: {
-        sans: ['"Open Sans"', "system-ui", "-apple-system", "sans-serif"],
-        heading: ['"League Spartan"', "system-ui", "sans-serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
-      borderRadius: {
-        xl: "1rem",
-        "2xl": "1.5rem",
+      letterSpacing: {
+        tight2: "-0.02em",
+      },
+      backgroundImage: {
+        "gradient-brand": "linear-gradient(135deg, #443CFF 0%, #04C5FF 100%)",
       },
     },
   },

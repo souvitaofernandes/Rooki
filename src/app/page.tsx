@@ -1,34 +1,29 @@
-import { Hero } from "@/components/blocks/Hero";
-import { SocialProof } from "@/components/blocks/SocialProof";
-import { HowItWorks } from "@/components/blocks/HowItWorks";
-import { VideoDemo } from "@/components/blocks/VideoDemo";
-import { WhatWeAnalyze } from "@/components/blocks/WhatWeAnalyze";
-import { Recognition } from "@/components/blocks/Recognition";
-import { ForWhom } from "@/components/blocks/ForWhom";
-import { LeadCapture } from "@/components/blocks/LeadCapture";
-import { TeaserBlock } from "@/components/blocks/TeaserBlock";
-import { FAQBlock } from "@/components/blocks/FAQBlock";
-import { homeContent } from "@/data/home";
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
+import { Problema } from "@/components/Problema";
+import { OQueE } from "@/components/OQueE";
+import { ComoFunciona } from "@/components/ComoFunciona";
+import { ParaQuem } from "@/components/ParaQuem";
+import { PorQue } from "@/components/PorQue";
+import { QuemSomos } from "@/components/QuemSomos";
+import { CtaFinal } from "@/components/CtaFinal";
+import { Footer } from "@/components/Footer";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
-      <Hero />
-      <SocialProof />
-      <HowItWorks />
-      <VideoDemo />
-      <WhatWeAnalyze />
-      <ForWhom />
-      <Recognition />
-      <LeadCapture />
-      <TeaserBlock content={homeContent.insightsTeaser} background="snow" />
-      <FAQBlock
-        title={homeContent.faq.sectionTitle}
-        items={homeContent.faq.items}
-        ctaText={homeContent.faq.ctaText}
-        ctaHref={homeContent.faq.ctaHref}
-        background="linen"
-      />
+      <Header />
+      <main>
+        <Hero />
+        <Problema />
+        <OQueE />
+        <ComoFunciona />
+        <ParaQuem />
+        <PorQue />
+        <QuemSomos />
+        <CtaFinal />
+      </main>
+      <Footer />
     </>
   );
 }
