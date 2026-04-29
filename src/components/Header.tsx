@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Container } from "./Container";
-import { CONTACT_EMAIL, cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 const links = [
   { href: "#como-funciona", label: "Como funciona" },
@@ -32,10 +32,8 @@ export function Header() {
     >
       <Container className="flex h-16 items-center justify-between md:h-[72px]">
         <Link href="/" className="flex items-center gap-2" aria-label="Rooki — página inicial">
-          <span className="inline-flex items-center gap-2">
-            <span className="h-2.5 w-2.5 rounded-full bg-success" aria-hidden />
-            <span className="font-extrabold text-[20px] tracking-tight2 text-ink">Rooki</span>
-          </span>
+          {/* Substituir pelo SVG real da Rooki */}
+          <span className="font-extrabold text-[20px] tracking-tight2 text-ink">Rooki</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8" aria-label="Principal">
@@ -51,12 +49,12 @@ export function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <a
-            href={`mailto:${CONTACT_EMAIL}`}
+          <Link
+            href="#waitlist"
             className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-[14px] font-semibold text-white transition-colors hover:bg-primary/90"
           >
-            Falar com a gente
-          </a>
+            Entrar na lista
+          </Link>
         </div>
 
         <button
@@ -83,13 +81,13 @@ export function Header() {
                 {l.label}
               </Link>
             ))}
-            <a
-              href={`mailto:${CONTACT_EMAIL}`}
+            <Link
+              href="#waitlist"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-[15px] font-semibold text-white"
             >
-              Falar com a gente
-            </a>
+              Entrar na lista
+            </Link>
           </Container>
         </div>
       )}

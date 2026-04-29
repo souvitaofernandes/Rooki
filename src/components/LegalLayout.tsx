@@ -25,6 +25,7 @@ export function LegalLayout({
       <main className="py-16 md:py-20">
         <Container>
           <div className="mx-auto max-w-[720px]">
+            {/* TODO: Vitão atualizar Política e Termos para incluir app mobile antes do deploy. Atual versão é só WhatsApp. */}
             <p className="text-[13px] font-semibold uppercase tracking-wider text-primary">
               Documento legal
             </p>

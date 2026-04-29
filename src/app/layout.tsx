@@ -9,13 +9,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Rooki — Antes de cair em um golpe, pergunte à Rooki",
+  title: "Rooki — Sua segunda opinião contra golpes digitais",
   description:
-    "A Rooki é uma segunda opinião sobre mensagens suspeitas. Funciona no WhatsApp, em segundos, e fala português brasileiro porque os golpes daqui são daqui.",
+    "A Rooki te ajuda a saber, em segundos, se aquela mensagem suspeita é golpe. Funciona no WhatsApp. App em breve.",
   openGraph: {
-    title: "Rooki — Mostra pra Rooki antes de clicar",
+    title: "Rooki — Antes de cair, pergunta pra Rooki",
     description:
-      "A Rooki é uma segunda opinião sobre mensagens suspeitas. Funciona no WhatsApp, em segundos.",
+      "A Rooki é uma segunda opinião na hora da dúvida. Você manda a mensagem suspeita, em segundos sabe se pode confiar.",
     url: "https://rooki.com.br",
     siteName: "Rooki",
     locale: "pt_BR",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Rooki",
-    description: "Mostra pra Rooki antes de clicar.",
+    description: "Antes de cair, pergunta pra Rooki.",
   },
 };
 

@@ -1,6 +1,7 @@
+import Link from "next/link";
 import { Container } from "./Container";
 import { FadeIn } from "./FadeIn";
-import { CONTACT_EMAIL, WHATSAPP_URL } from "@/lib/utils";
+import { WHATSAPP_URL } from "@/lib/utils";
 
 export function Hero() {
   return (
@@ -9,42 +10,49 @@ export function Hero() {
         aria-hidden
         className="pointer-events-none absolute inset-x-0 -top-20 h-[420px] bg-[radial-gradient(60%_60%_at_50%_0%,rgba(68,60,255,0.07),transparent)]"
       />
-      <Container className="relative pt-12 pb-16 md:pt-20 md:pb-28">
+      <Container className="relative pt-10 pb-16 md:pt-16 md:pb-28">
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
             <FadeIn>
-              <h1 className="text-[36px] leading-[1.05] tracking-tight2 font-extrabold text-ink sm:text-[44px] md:text-[56px] lg:text-[64px] xl:text-[72px]">
-                Aquela mensagem que parece golpe, geralmente é. Mostra pra Rooki antes de clicar.
+              <div className="inline-flex items-center gap-2 rounded-full bg-success/10 px-3.5 py-1.5 text-[13px] font-medium text-[#0a6b2e]">
+                <span className="h-2 w-2 rounded-full bg-success" aria-hidden />
+                Rooki ativa no WhatsApp · App em breve
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.06}>
+              <h1 className="mt-6 text-[36px] leading-[1.05] tracking-tight2 font-extrabold text-ink sm:text-[44px] md:text-[56px] lg:text-[64px] xl:text-[72px]">
+                A mensagem que parecia golpe era golpe. E você quase pagou.
               </h1>
             </FadeIn>
-            <FadeIn delay={0.08}>
+            <FadeIn delay={0.12}>
               <p className="mt-6 max-w-2xl text-[17px] leading-relaxed text-muted md:text-[19px]">
-                A Rooki é uma segunda opinião sobre mensagens suspeitas. Funciona no WhatsApp, em
-                segundos, e fala português brasileiro porque os golpes daqui são daqui.
+                A Rooki é uma segunda opinião na hora da dúvida. Você recebe algo estranho, manda
+                pra Rooki, e em segundos sabe se pode confiar. Funciona hoje no WhatsApp. App tá
+                vindo.
               </p>
             </FadeIn>
-            <FadeIn delay={0.14}>
+            <FadeIn delay={0.18}>
               <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-3">
-                <a
-                  href={`mailto:${CONTACT_EMAIL}`}
+                <Link
+                  href="#waitlist"
                   className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-primary/90"
                 >
-                  Falar com a gente
-                </a>
+                  Entrar na lista do app
+                </Link>
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-full border border-border bg-bg px-6 py-3.5 text-[15px] font-semibold text-ink transition-colors hover:bg-border/40"
                 >
-                  Quero usar a Rooki
+                  Usar agora no WhatsApp
                 </a>
               </div>
             </FadeIn>
           </div>
 
           <div className="lg:col-span-5">
-            <FadeIn delay={0.2}>
+            <FadeIn delay={0.22}>
               <ChatMock />
             </FadeIn>
           </div>
@@ -71,9 +79,17 @@ function ChatMock() {
 
       <div className="mt-4 space-y-3">
         <div className="flex justify-end">
-          <div className="max-w-[88%] rounded-2xl rounded-br-md bg-[#F1F2F6] px-4 py-2.5">
+          <div className="max-w-[88%] rounded-2xl rounded-br-md bg-[#F3F4F6] px-4 py-2.5">
+            <p className="text-[14px] leading-relaxed text-ink">Recebi isso agora, é golpe?</p>
+          </div>
+        </div>
+
+        <div className="flex justify-end">
+          <div className="max-w-[88%] rounded-2xl rounded-br-md bg-[#F3F4F6] px-4 py-2.5">
+            <p className="mb-1 text-[11px] font-medium text-muted">Encaminhada</p>
             <p className="text-[14px] leading-relaxed text-ink">
-              URGENTE: Sua conta foi bloqueada. Confirme seus dados em: bit.ly/banco-confirmar
+              ATENÇÃO: Sua conta do Itaú será bloqueada em 1h. Confirme seus dados:
+              bit.ly/itau-seguro
             </p>
           </div>
         </div>
@@ -81,9 +97,9 @@ function ChatMock() {
         <div className="flex justify-start">
           <div className="max-w-[92%] rounded-2xl rounded-bl-md bg-primary px-4 py-3 text-white">
             <p className="text-[14px] leading-relaxed">
-              Isso é golpe. O domínio bit.ly é encurtador, e bancos nunca pedem confirmação por
-              link. Não clique. Se quiser confirmar algo da sua conta, ligue direto pro banco
-              usando o número do cartão.
+              É golpe. Banco não pede confirmação por link encurtado, principalmente bit.ly. Não
+              clique. Se tiver dúvida real sobre sua conta, liga no número que tá atrás do seu
+              cartão.
             </p>
           </div>
         </div>

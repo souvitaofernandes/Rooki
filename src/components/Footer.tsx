@@ -8,9 +8,10 @@ export function Footer() {
       <Container className="py-14">
         <div className="grid gap-10 md:grid-cols-3 md:gap-12">
           <div>
+            {/* Substituir pelo SVG real da Rooki */}
             <span className="font-extrabold text-[20px] tracking-tight2 text-ink">Rooki</span>
             <p className="mt-3 text-[14px] leading-relaxed text-muted max-w-[260px]">
-              Mostra pra Rooki antes de clicar.
+              Antes de cair, pergunta pra Rooki.
             </p>
           </div>
 
@@ -20,7 +21,17 @@ export function Footer() {
             </h3>
             <ul className="mt-4 space-y-2.5 text-[14px]">
               <li>
-                <Link href="/#quem-somos" className="text-text/85 hover:text-ink transition-colors">
+                <Link href="#como-funciona" className="text-text/85 hover:text-ink transition-colors">
+                  Como funciona
+                </Link>
+              </li>
+              <li>
+                <Link href="#para-empresas" className="text-text/85 hover:text-ink transition-colors">
+                  Para empresas
+                </Link>
+              </li>
+              <li>
+                <Link href="#quem-somos" className="text-text/85 hover:text-ink transition-colors">
                   Quem somos
                 </Link>
               </li>
@@ -77,8 +88,8 @@ export function Footer() {
         </div>
 
         <p className="mt-12 text-center text-[12px] text-muted">
-          © 2026 Rooki Tecnologia LTDA · CNPJ 49.444.116/0001-09 · Feita no Brasil, contra os
-          golpes daqui.
+          © 2026 Rooki Tecnologia LTDA · CNPJ 49.444.116/0001-09 · Mogi das Cruzes/SP · Feita
+          no Brasil, contra os golpes daqui.
         </p>
       </Container>
     </footer>

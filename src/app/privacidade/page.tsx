@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   description: "Como a Rooki trata seus dados pessoais.",
 };
 
+/* TODO: Vitão atualizar Política e Termos para incluir app mobile antes do deploy. Atual versão é só WhatsApp. */
+
 const sections: LegalSection[] = [
   {
     id: "quem-somos",
@@ -251,8 +253,8 @@ const sections: LegalSection[] = [
         <ul className="list-disc pl-5 space-y-1.5">
           <li>
             Por e-mail:{" "}
-            <a className="text-primary hover:underline" href="mailto:privacidade@rooki.com.br">
-              privacidade@rooki.com.br
+            <a className="text-primary hover:underline" href="mailto:contato@rooki.com.br">
+              contato@rooki.com.br
             </a>
           </li>
           <li>
@@ -301,8 +303,8 @@ const sections: LegalSection[] = [
         </p>
         <p>
           E-mail para contato:{" "}
-          <a className="text-primary hover:underline" href="mailto:dpo@rooki.com.br">
-            dpo@rooki.com.br
+          <a className="text-primary hover:underline" href="mailto:contato@rooki.com.br">
+            contato@rooki.com.br
           </a>
         </p>
         <p>

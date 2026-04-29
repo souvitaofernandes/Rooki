@@ -3,7 +3,7 @@ import { FadeIn } from "./FadeIn";
 
 export function PorQue() {
   return (
-    <section className="py-20 md:py-28">
+    <section className="bg-[#F8F9FB] py-20 md:py-28">
       <Container>
         <div className="max-w-3xl">
           <FadeIn>
@@ -17,12 +17,12 @@ export function PorQue() {
           <FadeIn>
             <div className="grid gap-6 md:grid-cols-12 md:gap-10 items-start">
               <h3 className="md:col-span-5 text-[22px] md:text-[28px] font-bold tracking-tight2 text-ink">
-                A Rooki é brasileira.
+                A Rooki é brasileira de fato.
               </h3>
               <p className="md:col-span-7 text-[16px] md:text-[18px] leading-relaxed text-muted">
-                Os golpes daqui têm sotaque, têm referência cultural, têm modus operandi próprio.
-                Uma IA treinada com fraudes americanas não pega isso. A gente treina com o que
-                acontece aqui, todo dia.
+                Os golpes daqui têm sotaque, têm gancho, têm gente por trás. PIX falso, boleto
+                adulterado, falsa central, &ldquo;filho&rdquo; pedindo dinheiro — isso é cardápio
+                brasileiro. IA treinada com fraude americana não pega isso.
               </p>
             </div>
           </FadeIn>
@@ -33,9 +33,9 @@ export function PorQue() {
                 A Rooki não promete o que não pode.
               </h3>
               <p className="md:col-span-5 md:order-1 text-[16px] md:text-[18px] leading-relaxed text-muted">
-                A gente acerta na maioria. Erra às vezes. Quando erramos, continuamos do lado do
-                usuário: orientamos no que fazer pós-clique, no que recuperar, em quem acionar.
-                Antifraude honesta vale mais que antifraude infalível no papel.
+                A gente acerta na maioria dos casos. Erra em alguns. Quando erra, continua do seu
+                lado: te orienta no que fazer pós-clique, em quem acionar, em como tentar reverter.
+                Antifraude honesta vale mais que antifraude que se vende como infalível.
               </p>
             </div>
           </FadeIn>
@@ -46,9 +46,9 @@ export function PorQue() {
                 A Rooki aprende todo dia.
               </h3>
               <p className="md:col-span-7 text-[16px] md:text-[18px] leading-relaxed text-muted">
-                Os golpes mudam toda semana. A gente muda junto. O motor de detecção melhora a
-                cada caso analisado, e a base de conhecimento sobre fraude brasileira é ativo
-                nosso — não está em prateleira de fornecedor estrangeiro.
+                Os golpes mudam toda semana. A gente muda junto. Cada caso analisado vira
+                aprendizado. A base de conhecimento sobre fraude brasileira é nossa, e cresce
+                diariamente.
               </p>
             </div>
           </FadeIn>

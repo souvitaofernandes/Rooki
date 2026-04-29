@@ -1,6 +1,6 @@
-# Rooki — Mostra pra Rooki antes de clicar
+# Rooki — Antes de cair, pergunta pra Rooki
 
-Landing page institucional da Rooki, plataforma brasileira que ajuda pessoas e empresas a identificar mensagens suspeitas e potenciais golpes digitais antes do clique.
+Landing page da Rooki, app brasileiro de proteção contra golpes digitais. O app está em desenvolvimento (iOS primeiro); hoje a Rooki funciona via WhatsApp.
 
 ## Stack
 
@@ -17,8 +17,9 @@ Landing page institucional da Rooki, plataforma brasileira que ajuda pessoas e e
 src/
 ├── app/
 │   ├── layout.tsx
-│   ├── page.tsx           # Landing
+│   ├── page.tsx                # Landing
 │   ├── globals.css
+│   ├── api/waitlist/route.ts   # POST endpoint para waitlist
 │   ├── privacidade/page.tsx
 │   └── termos/page.tsx
 ├── components/
@@ -27,16 +28,16 @@ src/
 │   ├── Problema.tsx
 │   ├── OQueE.tsx
 │   ├── ComoFunciona.tsx
-│   ├── ParaQuem.tsx
 │   ├── PorQue.tsx
+│   ├── ParaEmpresas.tsx
 │   ├── QuemSomos.tsx
-│   ├── CtaFinal.tsx
+│   ├── Waitlist.tsx
 │   ├── Footer.tsx
 │   ├── LegalLayout.tsx
 │   ├── Container.tsx
 │   └── FadeIn.tsx
 └── lib/
-    └── utils.ts            # cn(), WHATSAPP_URL, CONTACT_EMAIL
+    └── utils.ts                # cn(), WHATSAPP_URL, CONTACT_EMAIL
 ```
 
 ## Scripts
@@ -48,17 +49,14 @@ npm run start
 npm run lint
 ```
 
-## Identidade visual
+## Antes de publicar
 
-- Branco `#FFFFFF` e navy `#0A0E27` dominam.
-- Acentos pontuais: primária `#443CFF`, ciano `#04C5FF`, verde `#00FC6E`.
-- Tipografia única: Inter, peso 700/800 nas headlines.
-
-## Substituições antes de publicar
-
-- `public/logo.svg` — substituir pelo SVG final da Rooki.
-- LinkedIn e Instagram no `Footer.tsx` — trocar pelos links reais.
-- Número do WhatsApp em `src/lib/utils.ts` — confirmar.
+- `public/logo.svg` — substituir pelo SVG final da Rooki
+- LinkedIn e Instagram no `Footer.tsx` — trocar pelos links reais
+- Número do WhatsApp em `src/lib/utils.ts` — confirmar
+- Conectar `/api/waitlist` com serviço de email (Resend, ConvertKit, ou Google Sheets)
+- Atualizar Política de Privacidade e Termos de Uso para incluir app mobile
+- Validar estatísticas da seção Problema com Larissa
 
 ## Licença
 

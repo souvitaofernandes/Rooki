@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   description: "Condições para uso do serviço Rooki.",
 };
 
+/* TODO: Vitão atualizar Política e Termos para incluir app mobile antes do deploy. Atual versão é só WhatsApp. */
+
 const sections: LegalSection[] = [
   {
     id: "sobre",
