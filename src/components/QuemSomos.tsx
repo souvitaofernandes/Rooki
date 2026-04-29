@@ -3,7 +3,7 @@ import { FadeIn } from "./FadeIn";
 
 export function QuemSomos() {
   return (
-    <section id="quem-somos" className="bg-[#F8F9FB] py-20 md:py-28">
+    <section id="quem-somos" className="py-20 md:py-28">
       <Container>
         <div className="max-w-3xl">
           <FadeIn>
@@ -19,31 +19,33 @@ export function QuemSomos() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <blockquote className="mt-6 border-l-2 border-primary pl-5 italic text-[17px] md:text-[20px] leading-relaxed text-ink">
-              &ldquo;Esse link é confiável?&rdquo; &ldquo;Esse Pix é o do banco mesmo?&rdquo;
-              &ldquo;Recebi uma mensagem do meu filho pedindo dinheiro, mas o número é
-              estranho...&rdquo;
-            </blockquote>
+            <div className="mt-6 space-y-2 border-l-2 border-primary pl-5 italic text-[17px] md:text-[20px] leading-relaxed text-muted">
+              <p>&ldquo;Esse link é seguro?&rdquo;</p>
+              <p>&ldquo;Esse Pix é mesmo do banco?&rdquo;</p>
+              <p>&ldquo;Recebi mensagem do meu filho de outro número, é ele?&rdquo;</p>
+              <p>&ldquo;Essa central que ligou pedindo dado, posso confiar?&rdquo;</p>
+            </div>
           </FadeIn>
 
           <FadeIn delay={0.14}>
             <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-muted">
-              A gente percebeu que a maioria das pessoas não tem com quem tirar essa dúvida na hora
-              que ela aparece. Procurar no Google é genérico. Perguntar pra família às vezes ajuda,
-              às vezes confunde mais. E o golpe está lá, esperando o clique.
+              A gente percebeu que a maioria das pessoas não tem com quem tirar essa dúvida na
+              hora exata em que ela aparece. Procurar no Google é genérico. Perguntar pra família
+              às vezes ajuda, às vezes confunde mais. E o golpe está lá, esperando você clicar.
             </p>
           </FadeIn>
 
           <FadeIn delay={0.18}>
             <p className="mt-5 text-[17px] md:text-[19px] leading-relaxed text-muted">
               Construímos a Rooki pra ser essa pessoa de confiança que responde rápido, fala
-              simples, e está disponível 24 horas por dia.
+              simples, e está disponível 24 horas por dia. Tá vivo no WhatsApp hoje. Vai virar app
+              em breve. Continua sendo Rooki em qualquer canal.
             </p>
           </FadeIn>
 
           <FadeIn delay={0.22}>
             <p className="mt-10 text-[14px] text-muted">
-              Construído por Vitão Fernandes (CEO), Hudson (CTO) e Larissa (CMO).
+              Vitão Fernandes (CEO) · Hudson Luiz (CTO) · Larissa Paixão (CMO)
             </p>
           </FadeIn>
         </div>

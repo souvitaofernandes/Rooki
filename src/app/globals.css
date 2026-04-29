@@ -11,6 +11,12 @@
   --cyan: #04c5ff;
   --success: #00fc6e;
   --border: #e5e7eb;
+  --gradient-brand: linear-gradient(90deg, #443CFF 0%, #04C5FF 50%, #00FC6E 100%);
+}
+
+.gradient-bar {
+  height: 4px;
+  background: var(--gradient-brand);
 }
 
 html {
