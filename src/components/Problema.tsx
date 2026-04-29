@@ -30,7 +30,7 @@ export function Problema() {
           <FadeIn delay={0.06}>
             <p className="mt-6 text-[17px] md:text-[19px] leading-relaxed text-muted">
               Todo brasileiro já recebeu algo estranho no celular. Quase todo brasileiro já se
-              enganou em algum.
+              enganou em alguma.
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
@@ -48,13 +48,13 @@ export function Problema() {
         </div>
 
         <FadeIn delay={0.2}>
-          <div className="mt-14 grid gap-8 border-t border-border pt-10 sm:grid-cols-3">
+          <div className="mt-14 grid gap-12 border-t border-border pt-10 sm:grid-cols-3 sm:gap-16">
             {stats.map((s) => (
               <div key={s.value}>
-                <p className="text-[32px] md:text-[40px] font-extrabold tracking-tight2 text-primary leading-none">
+                <p className="text-[48px] md:text-[64px] font-extrabold tracking-[-0.03em] text-primary leading-none">
                   {s.value}
                 </p>
-                <p className="mt-2 text-[14px] leading-relaxed text-muted">{s.label}</p>
+                <p className="mt-2 text-[14px] md:text-[15px] leading-relaxed text-muted">{s.label}</p>
               </div>
             ))}
           </div>

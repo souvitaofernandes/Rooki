@@ -14,13 +14,16 @@ export function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
             <FadeIn>
-              <div className="inline-flex items-center gap-2 rounded-full bg-success/10 px-3.5 py-1.5 text-[13px] font-medium text-[#0a6b2e]">
-                <span className="h-2 w-2 rounded-full bg-success" aria-hidden />
-                Rooki ativa no WhatsApp · App em breve
+              <div className="inline-flex flex-col">
+                <div className="inline-flex items-center gap-2 rounded-full bg-success/10 px-3.5 py-1.5 text-[13px] font-medium text-[#0a6b2e]">
+                  <span className="h-2 w-2 rounded-full bg-success" aria-hidden />
+                  Rooki ativa no WhatsApp · App em breve
+                </div>
+                <div className="mt-1 mx-2 h-[2px] rounded-full bg-[linear-gradient(90deg,#443CFF_0%,#04C5FF_50%,#00FC6E_100%)] opacity-50" aria-hidden />
               </div>
             </FadeIn>
             <FadeIn delay={0.06}>
-              <h1 className="mt-6 text-[36px] leading-[1.05] tracking-tight2 font-extrabold text-ink sm:text-[44px] md:text-[56px] lg:text-[64px] xl:text-[72px]">
+              <h1 className="mt-6 max-w-[720px] text-[36px] leading-[1.05] tracking-tight2 font-extrabold text-ink text-balance sm:text-[44px] md:text-[56px] lg:text-[64px] xl:text-[72px] xl:max-w-none">
                 A mensagem que parecia golpe era golpe. E você quase pagou.
               </h1>
             </FadeIn>

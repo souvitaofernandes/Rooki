@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { GradientBar } from "@/components/GradientBar";
 import { Problema } from "@/components/Problema";
 import { OQueE } from "@/components/OQueE";
 import { ComoFunciona } from "@/components/ComoFunciona";
@@ -15,11 +16,13 @@ export default function HomePage() {
       <Header />
       <main>
         <Hero />
+        <GradientBar />
         <Problema />
         <OQueE />
         <ComoFunciona />
         <PorQue />
         <ParaEmpresas />
+        <GradientBar />
         <QuemSomos />
         <Waitlist />
       </main>

@@ -3,7 +3,9 @@
 import { useState } from "react";
 import { Container } from "./Container";
 import { FadeIn } from "./FadeIn";
-import { CONTACT_EMAIL } from "@/lib/utils";
+
+const B2B_MAILTO =
+  "mailto:contato@rooki.com.br?subject=Interesse%20em%20parceria%20Rooki&body=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20parceria%20com%20a%20Rooki.";
 
 export function ParaEmpresas() {
   const [showForm, setShowForm] = useState(false);
@@ -20,7 +22,7 @@ export function ParaEmpresas() {
           </FadeIn>
 
           <FadeIn delay={0.06}>
-            <p className="mt-6 text-[16px] md:text-[18px] leading-relaxed text-white/75">
+            <p className="mt-6 text-[16px] md:text-[18px] leading-[1.7] text-white">
               Banco, telecom, seguradora, plano de saúde, varejo. Empresas que vivem da confiança
               do cliente. Seus clientes recebem golpe todo dia. Quando caem, ligam pra você. Vocês
               ressarcem. Respondem no Reclame Aqui. Gastam horas de operação.
@@ -28,22 +30,23 @@ export function ParaEmpresas() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <p className="mt-5 text-[16px] md:text-[18px] leading-relaxed text-white/75">
+            <p className="mt-5 text-[16px] md:text-[18px] leading-[1.7] text-white">
               Tudo isso poderia ter sido evitado com uma checagem de 5 segundos antes da decisão
               errada.
             </p>
           </FadeIn>
 
           <FadeIn delay={0.14}>
-            <p className="mt-5 text-[16px] md:text-[18px] leading-relaxed text-white/75">
+            <p className="mt-5 text-[16px] md:text-[18px] leading-[1.7] text-white">
               A Rooki entra ali. Você distribui pra sua base, a gente cuida da proteção. Modelo
-              parecido com o que operadoras já fazem com Spotify, Netflix, Deezer — mas pra
+              parecido com o que operadoras já fazem com{" "}
+              <span className="font-semibold text-cyan">Spotify, Netflix, Deezer</span> — mas pra
               confiança digital.
             </p>
           </FadeIn>
 
           <FadeIn delay={0.18}>
-            <p className="mt-8 text-[16px] md:text-[18px] leading-relaxed font-medium text-cyan">
+            <p className="mt-8 text-[16px] md:text-[18px] leading-[1.7] font-semibold text-white rounded-xl bg-white/[0.06] border border-white/10 px-5 py-4">
               Empregadores também: se você quer proteger seus colaboradores contra golpes que
               afetam folha, benefício e produtividade, a gente conversa.
             </p>
@@ -51,13 +54,19 @@ export function ParaEmpresas() {
 
           <FadeIn delay={0.22}>
             {!showForm && !submitted && (
-              <div className="mt-8">
+              <div className="mt-10">
+                <a
+                  href={B2B_MAILTO}
+                  className="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-[16px] font-bold text-white transition-all hover:brightness-110 hover:-translate-y-0.5"
+                >
+                  Falar com o time comercial
+                </a>
                 <button
                   type="button"
                   onClick={() => setShowForm(true)}
-                  className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3.5 text-[15px] font-semibold text-white transition-colors hover:bg-primary/90"
+                  className="mt-3 block text-[14px] font-medium text-white/60 hover:text-white transition-colors"
                 >
-                  Falar com o time comercial
+                  ou preencher formulário detalhado
                 </button>
               </div>
             )}
@@ -70,9 +79,9 @@ export function ParaEmpresas() {
             )}
 
             {submitted && (
-              <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+              <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.06] p-6">
                 <p className="text-[16px] font-semibold text-white">Mensagem enviada.</p>
-                <p className="mt-1 text-[14px] text-white/65">
+                <p className="mt-1 text-[14px] text-white/75">
                   A gente responde em até 48h úteis.
                 </p>
               </div>
@@ -104,7 +113,7 @@ function ContactForm({
       fd.get("mensagem"),
     ].join("\n");
     window.open(
-      `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
+      `mailto:contato@rooki.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
       "_self"
     );
     onSubmit();
@@ -149,14 +158,14 @@ function ContactForm({
       <div className="flex gap-3">
         <button
           type="submit"
-          className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-primary/90"
+          className="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 text-[14px] font-bold text-white transition-all hover:brightness-110"
         >
           Enviar
         </button>
         <button
           type="button"
           onClick={onCancel}
-          className="inline-flex items-center justify-center rounded-full border border-white/15 px-5 py-3 text-[14px] font-medium text-white/70 transition-colors hover:bg-white/[0.06]"
+          className="inline-flex items-center justify-center rounded-xl border border-white/15 px-5 py-3 text-[14px] font-medium text-white/70 transition-colors hover:bg-white/[0.06]"
         >
           Cancelar
         </button>

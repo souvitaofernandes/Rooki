@@ -45,10 +45,10 @@ export function OQueE() {
             {cards.map((c) => (
               <div
                 key={c.title}
-                className="rounded-2xl border border-white/10 bg-white/[0.04] p-6"
+                className="rounded-2xl border border-white/[0.08] bg-[#1A1F3A] p-6 md:p-8 transition-transform hover:-translate-y-0.5"
               >
-                <h3 className="text-[16px] font-bold text-white">{c.title}</h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-white/65">{c.body}</p>
+                <h3 className="text-[18px] md:text-[20px] font-bold text-white">{c.title}</h3>
+                <p className="mt-2 text-[15px] md:text-[16px] leading-relaxed text-white/75">{c.body}</p>
               </div>
             ))}
           </div>

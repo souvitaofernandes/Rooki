@@ -33,7 +33,7 @@ export function Waitlist() {
     <section id="waitlist" className="relative overflow-hidden py-20 md:py-28">
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-br from-primary to-cyan"
+        className="absolute inset-0 bg-[linear-gradient(135deg,#443CFF_0%,#04C5FF_60%,#00FC6E_100%)]"
       />
       <div
         aria-hidden

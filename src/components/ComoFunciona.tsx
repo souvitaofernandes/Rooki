@@ -34,12 +34,15 @@ export function ComoFunciona() {
         <div className="mt-12 md:mt-14 grid gap-6 md:grid-cols-3 md:gap-7">
           {steps.map((s, i) => (
             <FadeIn key={s.n} delay={i * 0.06}>
-              <article className="h-full rounded-2xl border border-border bg-bg p-7 transition-colors hover:border-ink/15">
+              <article className="group h-full overflow-hidden rounded-2xl border border-border bg-bg transition-colors hover:border-ink/15">
+                <div className="h-[3px] bg-[linear-gradient(90deg,#443CFF_0%,#04C5FF_50%,#00FC6E_100%)] opacity-80 transition-opacity group-hover:opacity-100" aria-hidden />
+                <div className="p-7">
                 <span className="block text-[34px] font-extrabold tracking-tight2 text-cyan leading-none">
                   {s.n}
                 </span>
                 <h3 className="mt-5 text-[20px] font-bold tracking-tight2 text-ink">{s.title}</h3>
                 <p className="mt-3 text-[15px] leading-relaxed text-muted">{s.body}</p>
+                </div>
               </article>
             </FadeIn>
           ))}
