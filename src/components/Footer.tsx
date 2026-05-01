@@ -1,96 +1,73 @@
 import Link from "next/link";
 import { Container } from "./Container";
-import { CONTACT_EMAIL } from "@/lib/utils";
+
+const links = {
+  Produto: [
+    { href: "#como-funciona", label: "Como funciona" },
+    { href: "#para-empresas", label: "Para empresas" },
+    { href: "#metricas", label: "Métricas" },
+  ],
+  Piloto: [
+    { href: "#piloto", label: "Piloto 90 dias" },
+    { href: "#precos", label: "Modelo comercial" },
+    { href: "#contato", label: "Solicitar piloto" },
+  ],
+  Contato: [
+    { href: "#contato", label: "Falar com a Rooki" },
+    { href: "#faq", label: "FAQ" },
+  ],
+  Legal: [
+    { href: "/privacidade", label: "Privacidade" },
+    { href: "/termos", label: "Termos de uso" },
+  ],
+};
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-bg">
-      <Container className="py-14">
-        <div className="grid gap-10 md:grid-cols-3 md:gap-12">
-          <div>
-            {/* Substituir pelo SVG real da Rooki */}
-            <span className="font-extrabold text-[20px] tracking-tight2 text-ink">Rooki</span>
-            <p className="mt-3 text-[14px] leading-relaxed text-muted max-w-[260px]">
-              Antes de cair, pergunta pra Rooki.
+    <footer className="bg-ink text-white/60 pt-14 pb-8">
+      <Container>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+          {/* Brand */}
+          <div className="lg:col-span-1">
+            <img
+              src="/LOGO-HORIZONTAL-PRINCIPAL.svg"
+              alt="Rooki"
+              className="h-7 w-auto mb-3 brightness-0 invert"
+            />
+            <p className="text-sm text-white/50 leading-relaxed">
+              Segurança digital para o momento da dúvida.
             </p>
           </div>
 
-          <div>
-            <h3 className="text-[13px] font-semibold uppercase tracking-wider text-ink/70">
-              Empresa
-            </h3>
-            <ul className="mt-4 space-y-2.5 text-[14px]">
-              <li>
-                <Link href="#como-funciona" className="text-text/85 hover:text-ink transition-colors">
-                  Como funciona
-                </Link>
-              </li>
-              <li>
-                <Link href="#para-empresas" className="text-text/85 hover:text-ink transition-colors">
-                  Para empresas
-                </Link>
-              </li>
-              <li>
-                <Link href="#quem-somos" className="text-text/85 hover:text-ink transition-colors">
-                  Quem somos
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacidade" className="text-text/85 hover:text-ink transition-colors">
-                  Política de privacidade
-                </Link>
-              </li>
-              <li>
-                <Link href="/termos" className="text-text/85 hover:text-ink transition-colors">
-                  Termos de uso
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-[13px] font-semibold uppercase tracking-wider text-ink/70">
-              Contato
-            </h3>
-            <ul className="mt-4 space-y-2.5 text-[14px]">
-              <li>
-                <a
-                  href={`mailto:${CONTACT_EMAIL}`}
-                  className="text-text/85 hover:text-ink transition-colors"
-                >
-                  {CONTACT_EMAIL}
-                </a>
-              </li>
-              <li>
-                {/* Substituir pelo link real */}
-                <a
-                  href="https://www.linkedin.com/company/rooki"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-text/85 hover:text-ink transition-colors"
-                >
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                {/* Substituir pelo link real */}
-                <a
-                  href="https://www.instagram.com/rooki"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-text/85 hover:text-ink transition-colors"
-                >
-                  Instagram
-                </a>
-              </li>
-            </ul>
-          </div>
+          {/* Nav groups */}
+          {Object.entries(links).map(([group, items]) => (
+            <div key={group}>
+              <p className="text-white/80 font-semibold text-sm mb-3">{group}</p>
+              <ul className="space-y-2">
+                {items.map(({ href, label }) => (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      className="text-sm text-white/50 hover:text-white/80 transition-colors"
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        <p className="mt-12 text-center text-[12px] text-muted">
-          © 2026 Rooki Tecnologia LTDA · CNPJ 49.444.116/0001-09 · Mogi das Cruzes/SP · Feita
-          no Brasil, contra os golpes daqui.
-        </p>
+        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-white/30">
+            © {new Date().getFullYear()} Rooki. Todos os direitos reservados.
+          </p>
+          <p className="text-xs text-white/30 text-center max-w-xl">
+            A Rooki oferece orientação preventiva e educativa. A solução não substitui canais
+            oficiais, suporte da empresa parceira ou análise especializada em casos críticos.
+          </p>
+        </div>
       </Container>
     </footer>
   );

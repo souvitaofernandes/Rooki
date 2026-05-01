@@ -9,13 +9,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Rooki — Sua segunda opinião contra golpes digitais",
+  title: "Rooki | Proteção digital contra golpes para bases de usuários",
   description:
-    "A Rooki te ajuda a saber, em segundos, se aquela mensagem suspeita é golpe. Funciona no WhatsApp. App em breve.",
+    "A Rooki ajuda empresas a protegerem seus usuários contra golpes digitais pelo WhatsApp, com orientação em tempo real, educação embutida e inteligência sobre ameaças.",
   openGraph: {
-    title: "Rooki — Antes de cair, pergunta pra Rooki",
+    title: "Rooki | Proteção digital contra golpes para bases de usuários",
     description:
-      "A Rooki é uma segunda opinião na hora da dúvida. Você manda a mensagem suspeita, em segundos sabe se pode confiar.",
+      "A Rooki ajuda empresas a protegerem seus usuários contra golpes digitais pelo WhatsApp, com orientação em tempo real, educação embutida e inteligência sobre ameaças.",
     url: "https://rooki.com.br",
     siteName: "Rooki",
     locale: "pt_BR",
@@ -23,8 +23,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rooki",
-    description: "Antes de cair, pergunta pra Rooki.",
+    title: "Rooki | Proteção digital contra golpes",
+    description:
+      "Proteja seus usuários contra golpes digitais no momento da dúvida.",
   },
 };
 
