@@ -11,12 +11,46 @@
   --cyan: #04c5ff;
   --success: #00fc6e;
   --border: #e5e7eb;
-  --gradient-brand: linear-gradient(90deg, #443CFF 0%, #04C5FF 50%, #00FC6E 100%);
+  --gradient-brand: linear-gradient(45deg, #443CFF 0%, #04C5FF 60%, #00FC6E 100%);
 }
 
 .gradient-bar {
   height: 4px;
   background: var(--gradient-brand);
+}
+
+.bg-brand-gradient {
+  background: linear-gradient(45deg, #443CFF 0%, #04C5FF 60%, #00FC6E 100%);
+}
+
+.bg-brand-gradient-subtle {
+  background: linear-gradient(45deg, rgba(68,60,255,0.06) 0%, rgba(4,197,255,0.06) 60%, rgba(0,252,110,0.04) 100%);
+}
+
+.text-brand-gradient {
+  background: linear-gradient(45deg, #443CFF 0%, #04C5FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.badge-brand {
+  background: linear-gradient(45deg, rgba(68,60,255,0.08) 0%, rgba(4,197,255,0.08) 100%);
+  border: 1px solid rgba(68,60,255,0.18);
+  color: #443CFF;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #443CFF 0%, #04C5FF 100%);
+  color: white;
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
 }
 
 html {
