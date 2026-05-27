@@ -6,7 +6,7 @@ const variantClasses: Record<SectionVariant, string> = {
   white: "bg-white",
   "off-white": "bg-off-white",
   gradient: "bg-gradient-brand",
-  dark: "bg-[#1A1D2E] text-white",
+  dark: "bg-[#0A0E27] text-white",
 };
 
 interface SectionProps {

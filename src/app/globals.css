@@ -20,6 +20,13 @@
   background: var(--gradient-brand);
 }
 
+.gradient-text {
+  background: linear-gradient(45deg, #443CFF, #04C5FF, #00FC6E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;

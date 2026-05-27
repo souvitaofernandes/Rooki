@@ -30,36 +30,85 @@ export default function HomePage() {
     <>
       <Header />
       <main>
-        {/* Bloco 1 — Hero */}
-        <Section variant="white" className="pt-16 pb-24 md:pt-20 md:pb-32">
-          <Container>
-            <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        {/* ── 1. Hero — dark ───────────────────────────────────────────── */}
+        <section className="relative overflow-hidden bg-[#0A0E27] pt-16 pb-24 md:pt-20 md:pb-36">
+          {/* Noise texture */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 opacity-[0.025]"
+            style={{
+              backgroundImage:
+                'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\'/%3E%3C/svg%3E")',
+            }}
+          />
+          {/* Radial gradient accent */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -top-[200px] -right-[200px] h-[600px] w-[600px]"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(68,60,255,0.18) 0%, transparent 70%)",
+            }}
+          />
+          {/* Bottom-left secondary accent */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute bottom-[-100px] left-[-100px] h-[400px] w-[400px]"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(4,197,255,0.07) 0%, transparent 70%)",
+            }}
+          />
+
+          <Container className="relative z-10">
+            <div className="grid items-center gap-16 lg:grid-cols-2">
+              {/* Left */}
               <div>
                 <FadeIn>
-                  <h1 className="font-display font-bold text-5xl md:text-7xl leading-[1.05] tracking-tight2 text-ink text-balance">
-                    Camada antifraude que o seu cliente usa antes da decisão
-                    errada.
+                  <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5">
+                    <span
+                      className="h-1.5 w-1.5 rounded-full bg-[#00FC6E]"
+                      aria-hidden
+                    />
+                    <span className="font-body text-[13px] font-medium text-white/60">
+                      Camada antifraude B2B2C — em operação
+                    </span>
+                  </div>
+                </FadeIn>
+
+                <FadeIn delay={0.06}>
+                  <h1
+                    className="mt-7 font-display font-bold leading-[1.04] tracking-tightest text-white text-balance"
+                    style={{ fontSize: "clamp(42px, 6.5vw, 88px)" }}
+                  >
+                    Camada antifraude que o seu cliente usa antes da{" "}
+                    <span className="gradient-text">decisão errada.</span>
                   </h1>
                 </FadeIn>
-                <FadeIn delay={0.08}>
-                  <p className="mt-6 font-body text-xl text-muted leading-relaxed max-w-lg">
+
+                <FadeIn delay={0.12}>
+                  <p
+                    className="mt-7 leading-relaxed text-white/60 max-w-[480px]"
+                    style={{ fontSize: "clamp(16px, 1.5vw, 20px)" }}
+                  >
                     Seu cliente recebe uma mensagem suspeita. Em segundos, a
                     Rooki responde no WhatsApp se aquilo é golpe — antes que ele
                     clique, pague ou confie.
                   </p>
                 </FadeIn>
-                <FadeIn delay={0.14}>
-                  <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+
+                <FadeIn delay={0.18}>
+                  <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
                     <Button href="/contato" variant="primary">
                       Agendar conversa
                     </Button>
                     <a
                       href="#o-problema"
-                      className="font-body font-semibold text-primary inline-flex items-center gap-1.5 group"
+                      className="font-body font-semibold text-white/50 hover:text-white transition-colors inline-flex items-center gap-2 group"
                     >
                       <span>Ver como funciona</span>
                       <span
-                        className="inline-block transition-transform group-hover:translate-y-1"
+                        className="inline-block transition-transform group-hover:translate-y-0.5"
                         aria-hidden
                       >
                         ↓
@@ -69,38 +118,40 @@ export default function HomePage() {
                 </FadeIn>
               </div>
 
-              <FadeIn delay={0.2}>
-                <div className="flex items-center justify-center">
-                  {/* TODO: inserir mockup de WhatsApp aqui */}
-                  <div className="TODO-mockup-whatsapp w-full max-w-[360px] aspect-[9/16] rounded-3xl bg-off-white border border-border flex items-center justify-center">
-                    <p className="font-body text-sm text-muted text-center px-8">
-                      TODO: mockup de WhatsApp
-                    </p>
-                  </div>
-                </div>
+              {/* Right — Chat mock */}
+              <FadeIn delay={0.22}>
+                <HeroChatMock />
               </FadeIn>
             </div>
           </Container>
-        </Section>
+        </section>
 
         <GradientBar />
 
-        {/* Bloco 2 — O Problema */}
-        <Section variant="off-white" id="o-problema" className="scroll-mt-20 py-20 md:py-32">
+        {/* ── 2. O Problema — off-white ────────────────────────────────── */}
+        <Section
+          variant="off-white"
+          id="o-problema"
+          className="scroll-mt-20"
+        >
           <Container>
             <div className="max-w-3xl">
               <FadeIn>
-                <h2 className="font-display font-semibold text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-tight2 text-ink">
+                <h2
+                  className="font-display font-semibold leading-[1.08] tracking-tight2 text-ink"
+                  style={{ fontSize: "clamp(30px, 4vw, 56px)" }}
+                >
                   O golpe não acontece mais no seu app. Acontece na cabeça do
                   seu cliente.
                 </h2>
               </FadeIn>
               <FadeIn delay={0.08}>
                 <p className="mt-8 font-body text-lg leading-relaxed text-muted">
-                  O golpe migrou. Saiu do link suspeito e entrou na conversa que
-                  parece legítima — no WhatsApp, no SMS, na ligação que imita o
-                  atendimento oficial. Sua arquitetura antifraude protege seu
-                  sistema, mas o golpe acontece num canal que você não controla.
+                  O golpe migrou. Saiu do link suspeito e entrou na conversa
+                  que parece legítima — no WhatsApp, no SMS, na ligação que
+                  imita o atendimento oficial. Sua arquitetura antifraude
+                  protege seu sistema, mas o golpe acontece num canal que você
+                  não controla.
                 </p>
               </FadeIn>
               <FadeIn delay={0.14}>
@@ -114,43 +165,46 @@ export default function HomePage() {
           </Container>
         </Section>
 
-        {/* Bloco 3 — Para o cliente */}
-        <Section variant="white">
+        {/* ── 3. Para o cliente — dark ─────────────────────────────────── */}
+        <Section variant="dark">
           <Container>
             <FadeIn>
-              <h2 className="font-display font-semibold text-3xl md:text-4xl tracking-tight2 text-ink mb-12">
+              <h2
+                className="font-display font-semibold leading-[1.08] tracking-tight2 text-white mb-14"
+                style={{ fontSize: "clamp(28px, 3.5vw, 48px)" }}
+              >
                 Para o seu cliente: segunda opinião em segundos.
               </h2>
             </FadeIn>
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-5 md:grid-cols-3">
               <FadeIn delay={0}>
-                <Card className="h-full">
-                  <h3 className="font-display font-semibold text-xl text-ink">
+                <Card variant="dark" className="h-full">
+                  <h3 className="font-display font-semibold text-xl text-white">
                     Veredito claro
                   </h3>
-                  <p className="mt-3 font-body text-muted leading-relaxed">
-                    Em segundos, ele entende se a mensagem é confiável, suspeita
-                    ou golpe. Com explicação.
+                  <p className="mt-3 font-body text-white/60 leading-relaxed">
+                    Em segundos, ele entende se a mensagem é confiável,
+                    suspeita ou golpe. Com explicação.
                   </p>
                 </Card>
               </FadeIn>
               <FadeIn delay={0.06}>
-                <Card className="h-full">
-                  <h3 className="font-display font-semibold text-xl text-ink">
+                <Card variant="dark" className="h-full">
+                  <h3 className="font-display font-semibold text-xl text-white">
                     No canal que ele já usa
                   </h3>
-                  <p className="mt-3 font-body text-muted leading-relaxed">
+                  <p className="mt-3 font-body text-white/60 leading-relaxed">
                     Sem instalar app, sem cadastro complicado. É no WhatsApp,
                     onde ele já está.
                   </p>
                 </Card>
               </FadeIn>
               <FadeIn delay={0.12}>
-                <Card className="h-full">
-                  <h3 className="font-display font-semibold text-xl text-ink">
+                <Card variant="dark" className="h-full">
+                  <h3 className="font-display font-semibold text-xl text-white">
                     Aprende enquanto se protege
                   </h3>
-                  <p className="mt-3 font-body text-muted leading-relaxed">
+                  <p className="mt-3 font-body text-white/60 leading-relaxed">
                     A cada análise, ele entende como o golpe funciona. Educação
                     no momento da dúvida — não em cartilha que ninguém lê.
                   </p>
@@ -160,15 +214,18 @@ export default function HomePage() {
           </Container>
         </Section>
 
-        {/* Bloco 4 — Para a empresa */}
-        <Section variant="off-white">
+        {/* ── 4. Para a empresa — white ────────────────────────────────── */}
+        <Section variant="white">
           <Container>
             <FadeIn>
-              <h2 className="font-display font-semibold text-3xl md:text-4xl tracking-tight2 text-ink mb-12">
+              <h2
+                className="font-display font-semibold leading-[1.08] tracking-tight2 text-ink mb-14"
+                style={{ fontSize: "clamp(28px, 3.5vw, 48px)" }}
+              >
                 Para a sua empresa: a defesa que faltava.
               </h2>
             </FadeIn>
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-5 md:grid-cols-3">
               <FadeIn delay={0}>
                 <Card className="h-full">
                   <h3 className="font-display font-semibold text-xl text-ink">
@@ -206,15 +263,18 @@ export default function HomePage() {
           </Container>
         </Section>
 
-        {/* Bloco 5 — Como funciona */}
-        <Section variant="white">
+        {/* ── 5. Como funciona — dark ──────────────────────────────────── */}
+        <Section variant="dark">
           <Container>
             <FadeIn>
-              <h2 className="font-display font-semibold text-3xl md:text-4xl tracking-tight2 text-ink mb-12">
+              <h2
+                className="font-display font-semibold leading-[1.08] tracking-tight2 text-white mb-14"
+                style={{ fontSize: "clamp(28px, 3.5vw, 48px)" }}
+              >
                 Como funciona, do ponto de vista do seu cliente.
               </h2>
             </FadeIn>
-            <div className="grid gap-6 md:grid-cols-3 md:gap-8">
+            <div className="grid gap-5 md:grid-cols-3">
               {[
                 {
                   n: "01",
@@ -233,26 +293,26 @@ export default function HomePage() {
                 },
               ].map((step, i) => (
                 <FadeIn key={step.n} delay={i * 0.07}>
-                  <div className="rounded-xl border border-border bg-bg p-8 hover:border-ink/15 transition-colors h-full">
-                    <span className="block font-display font-bold text-4xl text-primary leading-none">
+                  <Card variant="dark" className="h-full">
+                    <span className="block font-display font-bold text-4xl gradient-text leading-none">
                       {step.n}
                     </span>
-                    <h3 className="mt-5 font-display font-semibold text-xl text-ink">
+                    <h3 className="mt-6 font-display font-semibold text-xl text-white">
                       {step.title}
                     </h3>
-                    <p className="mt-3 font-body text-muted leading-relaxed">
+                    <p className="mt-3 font-body text-white/60 leading-relaxed">
                       {step.body}
                     </p>
-                  </div>
+                  </Card>
                 </FadeIn>
               ))}
             </div>
 
             <FadeIn delay={0.24}>
-              <div className="mt-12">
+              <div className="mt-10">
                 {/* TODO: inserir vídeo real do produto aqui */}
-                <div className="TODO-video-placeholder aspect-video bg-gray-100 rounded-xl flex items-center justify-center">
-                  <p className="text-muted font-body text-sm">
+                <div className="aspect-video rounded-xl border border-white/8 bg-white/[0.03] flex items-center justify-center">
+                  <p className="text-white/30 font-body text-sm">
                     Uso real do produto.
                   </p>
                 </div>
@@ -261,11 +321,14 @@ export default function HomePage() {
           </Container>
         </Section>
 
-        {/* Bloco 6 — Tipologias */}
+        {/* ── 6. Tipologias — off-white ────────────────────────────────── */}
         <Section variant="off-white">
           <Container>
             <FadeIn>
-              <h2 className="font-display font-semibold text-3xl md:text-4xl tracking-tight2 text-ink">
+              <h2
+                className="font-display font-semibold leading-[1.08] tracking-tight2 text-ink"
+                style={{ fontSize: "clamp(28px, 3.5vw, 48px)" }}
+              >
                 O que a Rooki identifica hoje.
               </h2>
             </FadeIn>
@@ -276,7 +339,7 @@ export default function HomePage() {
               </p>
             </FadeIn>
 
-            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {[
                 {
                   title: "Phishing",
@@ -326,23 +389,26 @@ export default function HomePage() {
           </Container>
         </Section>
 
-        {/* Bloco 7 — Para quem é */}
-        <Section variant="white">
+        {/* ── 7. Para quem é — dark ────────────────────────────────────── */}
+        <Section variant="dark">
           <Container>
             <div className="max-w-3xl">
               <FadeIn>
-                <h2 className="font-display font-semibold text-3xl md:text-4xl tracking-tight2 text-ink">
+                <h2
+                  className="font-display font-semibold leading-[1.08] tracking-tight2 text-white"
+                  style={{ fontSize: "clamp(28px, 3.5vw, 48px)" }}
+                >
                   Para quem a Rooki faz sentido.
                 </h2>
               </FadeIn>
               <FadeIn delay={0.08}>
-                <p className="mt-8 font-body text-lg leading-relaxed text-muted">
+                <p className="mt-8 font-body text-lg leading-relaxed text-white/60">
                   Empresas que atendem grandes bases de clientes e absorvem,
                   direta ou indiretamente, o custo do golpe.
                 </p>
               </FadeIn>
               <FadeIn delay={0.14}>
-                <p className="mt-5 font-body text-lg leading-relaxed text-muted">
+                <p className="mt-5 font-body text-lg leading-relaxed text-white/60">
                   Instituições financeiras, operadoras de telecom, saúde
                   suplementar, varejo, seguradoras, e qualquer organização cujo
                   cliente seja alvo direto de fraude no canal pessoal.
@@ -352,11 +418,14 @@ export default function HomePage() {
           </Container>
         </Section>
 
-        {/* Bloco 8 — Dados / LGPD teaser */}
-        <Section variant="off-white">
+        {/* ── 8. LGPD — white ──────────────────────────────────────────── */}
+        <Section variant="white">
           <Container>
             <FadeIn>
-              <h2 className="font-display font-semibold text-3xl md:text-4xl tracking-tight2 text-ink mb-12">
+              <h2
+                className="font-display font-semibold leading-[1.08] tracking-tight2 text-ink mb-14"
+                style={{ fontSize: "clamp(28px, 3.5vw, 48px)" }}
+              >
                 Como a Rooki trata o que passa por ela.
               </h2>
             </FadeIn>
@@ -380,11 +449,13 @@ export default function HomePage() {
               ].map((item, i) => (
                 <FadeIn key={item.title} delay={i * 0.07}>
                   <div>
-                    <item.Icon
-                      className="h-7 w-7 text-primary"
-                      strokeWidth={1.5}
-                    />
-                    <h3 className="mt-4 font-display font-semibold text-xl text-ink">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-off-white">
+                      <item.Icon
+                        className="h-5 w-5 text-primary"
+                        strokeWidth={1.5}
+                      />
+                    </div>
+                    <h3 className="mt-5 font-display font-semibold text-xl text-ink">
                       {item.title}
                     </h3>
                     <p className="mt-3 font-body text-muted leading-relaxed">
@@ -404,16 +475,19 @@ export default function HomePage() {
           </Container>
         </Section>
 
-        {/* Bloco 9 — Time */}
-        <Section variant="white">
+        {/* ── 9. Time — off-white ──────────────────────────────────────── */}
+        <Section variant="off-white">
           <Container>
             <FadeIn>
-              <h2 className="font-display font-semibold text-3xl md:text-4xl tracking-tight2 text-ink mb-12">
+              <h2
+                className="font-display font-semibold leading-[1.08] tracking-tight2 text-ink mb-14"
+                style={{ fontSize: "clamp(28px, 3.5vw, 48px)" }}
+              >
                 Quem está construindo.
               </h2>
             </FadeIn>
             {/* TODO: fotos do time em /public/team/ a adicionar antes do go-live */}
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-5 md:grid-cols-3">
               {[
                 { name: "Vitão Fernandes", role: "CEO" },
                 { name: "Hudson TODO", role: "CTO" },
@@ -421,8 +495,8 @@ export default function HomePage() {
               ].map((person, i) => (
                 <FadeIn key={person.name} delay={i * 0.07}>
                   <Card className="flex gap-5">
-                    <div className="h-14 w-14 shrink-0 rounded-full bg-off-white border border-border flex items-center justify-center">
-                      <span className="font-display font-bold text-lg text-muted">
+                    <div className="h-12 w-12 shrink-0 rounded-full bg-off-white border border-border flex items-center justify-center">
+                      <span className="font-display font-bold text-base text-muted">
                         {person.name[0]}
                       </span>
                     </div>
@@ -456,26 +530,39 @@ export default function HomePage() {
           </Container>
         </Section>
 
-        {/* Bloco 10 — CTA final */}
-        <Section variant="gradient">
-          <Container>
+        {/* ── 10. CTA final — dark ─────────────────────────────────────── */}
+        <section className="relative overflow-hidden bg-[#0A0E27] py-24 md:py-36">
+          {/* Accent radial */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(68,60,255,0.12) 0%, transparent 70%)",
+            }}
+          />
+          <Container className="relative z-10">
             <div className="mx-auto max-w-2xl text-center">
               <FadeIn>
-                <h2 className="font-display font-bold text-4xl md:text-5xl text-white leading-[1.1] tracking-tight2">
-                  Vamos colocar a Rooki na frente do seu cliente.
+                <h2
+                  className="font-display font-bold leading-[1.06] tracking-tightest text-white"
+                  style={{ fontSize: "clamp(36px, 5vw, 72px)" }}
+                >
+                  Vamos colocar a Rooki na{" "}
+                  <span className="gradient-text">frente do seu cliente.</span>
                 </h2>
               </FadeIn>
               <FadeIn delay={0.08}>
-                <p className="mt-6 font-body text-lg text-white/80 leading-relaxed">
+                <p className="mt-7 font-body text-lg text-white/55 leading-relaxed">
                   Em uma conversa de 30 minutos, mapeamos o tipo de golpe que
                   atinge sua base hoje e se a Rooki faz sentido para você.
                 </p>
               </FadeIn>
               <FadeIn delay={0.14}>
-                <div className="mt-8">
+                <div className="mt-10">
                   <Link
                     href="/contato"
-                    className="inline-flex items-center justify-center font-body font-semibold bg-white text-primary rounded-full py-4 px-8 text-[15px] hover:bg-white/90 transition-opacity"
+                    className="inline-flex items-center justify-center font-body font-semibold bg-white text-primary rounded-full py-4 px-10 text-[15px] hover:bg-white/90 transition-colors"
                   >
                     Agendar conversa
                   </Link>
@@ -483,9 +570,75 @@ export default function HomePage() {
               </FadeIn>
             </div>
           </Container>
-        </Section>
+        </section>
       </main>
       <Footer />
     </>
+  );
+}
+
+function HeroChatMock() {
+  return (
+    <div className="mx-auto max-w-[420px] rounded-2xl border border-white/10 bg-white/[0.04] p-5 shadow-[0_40px_100px_-30px_rgba(0,0,0,0.5)] backdrop-blur-sm">
+      {/* Header */}
+      <div className="flex items-center gap-3 pb-4 border-b border-white/8">
+        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary">
+          <span className="font-display font-bold text-[13px] text-white">
+            R
+          </span>
+        </div>
+        <div>
+          <p className="text-[14px] font-semibold text-white leading-none">
+            Rooki
+          </p>
+          <p className="mt-1 text-[12px] text-white/40 leading-none">
+            Segunda opinião antifraude
+          </p>
+        </div>
+        <span className="ml-auto inline-flex items-center gap-1.5 text-[11px] font-medium text-[#00FC6E]">
+          <span className="h-1.5 w-1.5 rounded-full bg-[#00FC6E]" />
+          online
+        </span>
+      </div>
+
+      {/* Messages */}
+      <div className="mt-4 space-y-3">
+        <div className="flex justify-end">
+          <div className="max-w-[85%] rounded-2xl rounded-br-md bg-white/8 px-4 py-3">
+            <p className="text-[13px] leading-relaxed text-white/80">
+              Recebi isso agora, é golpe?
+            </p>
+          </div>
+        </div>
+
+        <div className="flex justify-end">
+          <div className="max-w-[85%] rounded-2xl rounded-br-md bg-white/8 px-4 py-3">
+            <p className="mb-1.5 text-[11px] font-medium text-white/30">
+              Encaminhada
+            </p>
+            <p className="text-[13px] leading-relaxed text-white/60">
+              ATENÇÃO: Sua conta do Itaú será bloqueada em 1h. Confirme seus
+              dados: bit.ly/itau-seguro
+            </p>
+          </div>
+        </div>
+
+        <div className="flex justify-start">
+          <div className="max-w-[92%] rounded-2xl rounded-bl-md border border-primary/30 bg-primary/15 px-4 py-3">
+            <div className="mb-2.5 inline-flex items-center gap-1.5 rounded-full bg-red-500/15 px-2.5 py-1">
+              <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
+              <span className="text-[11px] font-semibold text-red-400 tracking-wide uppercase">
+                Golpe identificado
+              </span>
+            </div>
+            <p className="text-[13px] leading-relaxed text-white/80">
+              Banco não pede confirmação por link encurtado, principalmente
+              bit.ly. Não clique. Se tiver dúvida real sobre sua conta, ligue
+              no número do cartão.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

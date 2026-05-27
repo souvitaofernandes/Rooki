@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary" | "secondary" | "link";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "link";
 type ButtonSize = "default" | "small";
 
 interface ButtonProps {
@@ -20,9 +20,11 @@ const base =
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-gradient-brand text-white rounded-full hover:opacity-90 disabled:opacity-60",
+    "bg-primary text-white rounded-full hover:bg-primary/90 disabled:opacity-60",
   secondary:
     "border border-primary text-primary rounded-full bg-transparent hover:bg-primary/5 disabled:opacity-60",
+  ghost:
+    "border border-white/20 text-white rounded-full bg-transparent hover:bg-white/8 disabled:opacity-60",
   link: "text-primary gap-1 group p-0",
 };
 

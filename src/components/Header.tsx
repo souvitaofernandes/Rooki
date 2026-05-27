@@ -29,8 +29,8 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full bg-bg/85 backdrop-blur-md transition-colors",
-        scrolled ? "border-b border-border" : "border-b border-transparent"
+        "sticky top-0 z-50 w-full bg-[#0A0E27]/90 backdrop-blur-md transition-colors",
+        scrolled ? "border-b border-white/10" : "border-b border-transparent"
       )}
     >
       <Container className="flex h-16 items-center justify-between md:h-20">
@@ -41,6 +41,7 @@ export function Header() {
             width={120}
             height={39}
             priority
+            className="brightness-0 invert"
           />
         </Link>
 
@@ -49,7 +50,7 @@ export function Header() {
             <Link
               key={l.href}
               href={l.href}
-              className="font-body text-[15px] font-medium text-text/80 hover:text-ink transition-colors"
+              className="font-body text-[15px] font-medium text-white/60 hover:text-white transition-colors"
             >
               {l.label}
             </Link>
@@ -64,7 +65,7 @@ export function Header() {
 
         <button
           type="button"
-          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg text-ink"
+          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg text-white/70"
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -74,14 +75,14 @@ export function Header() {
       </Container>
 
       {open && (
-        <div className="md:hidden border-t border-border bg-bg">
+        <div className="md:hidden border-t border-white/10 bg-[#0A0E27]">
           <Container className="py-4 flex flex-col gap-1">
             {links.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-3 font-body text-[15px] font-medium text-text hover:bg-border/40"
+                className="rounded-lg px-3 py-3 font-body text-[15px] font-medium text-white/70 hover:bg-white/5 hover:text-white transition-colors"
               >
                 {l.label}
               </Link>
