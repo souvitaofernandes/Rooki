@@ -1,21 +1,29 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Sora, Montserrat } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const sora = Sora({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "600", "700"],
+  variable: "--font-sora",
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-montserrat",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Rooki — Sua segunda opinião contra golpes digitais",
+  title: "Rooki — Camada antifraude para o canal onde seu cliente já está",
   description:
-    "A Rooki te ajuda a saber, em segundos, se aquela mensagem suspeita é golpe. Funciona no WhatsApp. App em breve.",
+    "A Rooki ajuda seus clientes a identificar golpes no WhatsApp antes da decisão errada. Camada antifraude B2B2C para empresas que protegem grandes bases.",
   openGraph: {
-    title: "Rooki — Antes de cair, pergunta pra Rooki",
+    title: "Rooki — Camada antifraude para o canal onde seu cliente já está",
     description:
-      "A Rooki é uma segunda opinião na hora da dúvida. Você manda a mensagem suspeita, em segundos sabe se pode confiar.",
+      "A Rooki ajuda seus clientes a identificar golpes no WhatsApp antes da decisão errada.",
     url: "https://rooki.com.br",
     siteName: "Rooki",
     locale: "pt_BR",
@@ -24,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Rooki",
-    description: "Antes de cair, pergunta pra Rooki.",
+    description: "Camada antifraude para o canal onde seu cliente já está.",
   },
 };
 
@@ -34,8 +42,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={inter.variable}>
-      <body className="min-h-screen bg-bg font-sans text-text antialiased">
+    <html lang="pt-BR" className={`${sora.variable} ${montserrat.variable}`}>
+      <body className="min-h-screen bg-bg font-body text-text antialiased">
         {children}
       </body>
     </html>

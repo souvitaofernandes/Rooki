@@ -1,15 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Container } from "./Container";
+import { Button } from "./Button";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { href: "#como-funciona", label: "Como funciona" },
-  { href: "#para-empresas", label: "Para empresas" },
-  { href: "#quem-somos", label: "Quem somos" },
+  { href: "/produto", label: "Produto" },
+  { href: "/solucao", label: "Solução" },
+  { href: "/resultados", label: "Resultados" },
+  { href: "/empresa", label: "Empresa" },
 ];
 
 export function Header() {
@@ -30,10 +33,15 @@ export function Header() {
         scrolled ? "border-b border-border" : "border-b border-transparent"
       )}
     >
-      <Container className="flex h-16 items-center justify-between md:h-[72px]">
-        <Link href="/" className="flex items-center gap-2" aria-label="Rooki — página inicial">
-          {/* Substituir pelo SVG real da Rooki */}
-          <span className="font-extrabold text-[20px] tracking-tight2 text-ink">Rooki</span>
+      <Container className="flex h-16 items-center justify-between md:h-20">
+        <Link href="/" aria-label="Rooki — página inicial">
+          <Image
+            src="/LOGO-HORIZONTAL-PRINCIPAL.svg"
+            alt="Rooki"
+            width={120}
+            height={39}
+            priority
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8" aria-label="Principal">
@@ -41,7 +49,7 @@ export function Header() {
             <Link
               key={l.href}
               href={l.href}
-              className="text-[15px] font-medium text-text/80 hover:text-ink transition-colors"
+              className="font-body text-[15px] font-medium text-text/80 hover:text-ink transition-colors"
             >
               {l.label}
             </Link>
@@ -49,12 +57,9 @@ export function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <Link
-            href="#waitlist"
-            className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-[14px] font-semibold text-white transition-colors hover:bg-primary/90"
-          >
-            Entrar na lista
-          </Link>
+          <Button href="/contato" variant="primary" size="small">
+            Agendar conversa
+          </Button>
         </div>
 
         <button
@@ -76,18 +81,21 @@ export function Header() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-3 text-[15px] font-medium text-text hover:bg-border/40"
+                className="rounded-lg px-3 py-3 font-body text-[15px] font-medium text-text hover:bg-border/40"
               >
                 {l.label}
               </Link>
             ))}
-            <Link
-              href="#waitlist"
-              onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-[15px] font-semibold text-white"
-            >
-              Entrar na lista
-            </Link>
+            <div className="mt-2">
+              <Button
+                href="/contato"
+                variant="primary"
+                className="w-full justify-center"
+                onClick={() => setOpen(false)}
+              >
+                Agendar conversa
+              </Button>
+            </div>
           </Container>
         </div>
       )}
