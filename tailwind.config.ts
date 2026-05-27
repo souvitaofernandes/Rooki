@@ -22,6 +22,7 @@ const config: Config = {
       },
       letterSpacing: {
         tight2: "-0.02em",
+        tightest: "-0.03em",
       },
       backgroundImage: {
         "gradient-brand":
